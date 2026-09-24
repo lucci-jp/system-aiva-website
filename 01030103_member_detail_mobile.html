@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>会員詳細スマホ - SystemRocky</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          brand: {
+            50: '#EEF2FF', 100: '#E0E7FF', 500: '#6366F1', 600: '#4F46E5', 700: '#4338CA',
+          },
+          side: { 900: '#0D0D0D', 800: '#191919' },
+        }
+      }
+    }
+  }
+</script>
+
+</head>
+<body class="bg-gray-200">
+
+<!--
+  01030103 会員詳細スマホ
+  スマートフォン（〜428px幅）でオペレーターが会員詳細を確認・操作する画面。
+  PC版(01030102_member_detail.html)のサイドバー常時表示レイアウトは使わず、
+  ヘッダーのハンバーガーからナビ、下部タブでコンテンツ切替という
+  スマホ管理画面の一般的な構成に組み替えている。
+-->
+
+<div class="max-w-[428px] mx-auto min-h-screen bg-gray-50 shadow-xl relative flex flex-col">
+
+    <!-- オフキャンバスメニュー -->
+    <div id="sidebarOverlay" onclick="toggleMenu()" class="hidden fixed inset-0 bg-black/40 z-40"></div>
+    <aside id="sidebar" class="fixed inset-y-0 left-0 w-[78%] max-w-[320px] bg-side-900 text-white flex flex-col z-50 -translate-x-full transition-transform duration-200">
+        <div class="flex items-center justify-between px-4 py-4 border-b border-white/10">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 rounded-lg bg-brand-600 flex items-center justify-center font-bold">S</div>
+                <div>
+                    <div class="font-bold leading-none text-sm">SystemRocky</div>
+                    <div class="text-[10px] text-gray-500">ADMIN</div>
+                </div>
+            </div>
+            <button onclick="toggleMenu()" class="text-gray-400 text-xl leading-none px-2">&times;</button>
+        </div>
+        <div class="mx-4 my-3 p-3 bg-side-800 rounded-lg flex items-center gap-2">
+            <div class="w-7 h-7 rounded bg-brand-500 flex items-center justify-center text-xs font-bold">AJ</div>
+            <div class="text-xs">
+                <div class="font-medium">jukawaOP</div>
+                <div class="text-gray-500">オペレーター</div>
+            </div>
+        </div>
+        <nav class="flex-1 px-3 space-y-1 overflow-y-auto text-sm">
+            <div class="text-xs text-gray-500 px-3 pt-2 pb-1 tracking-wide">MAIN</div>
+            <a href="01030101_member_search.html" class="flex items-center px-3 py-2.5 rounded-lg bg-brand-600 text-white font-medium">会員管理</a>
+            <a href="01040101_group_list.html" class="flex items-center px-3 py-2.5 rounded-lg text-gray-400">グループ管理</a>
+            <a href="01050101_tag_list.html" class="flex items-center px-3 py-2.5 rounded-lg text-gray-400">タグ管理</a>
+            <a href="01060101_step_list.html" class="flex items-center px-3 py-2.5 rounded-lg text-gray-400">マガジン管理</a>
+            <a href="01070101_new_message.html" class="flex items-center px-3 py-2.5 rounded-lg text-gray-400">問合せ管理</a>
+            <a href="01080401_product_list.html" class="flex items-center px-3 py-2.5 rounded-lg text-gray-400">商品管理</a>
+            <div class="text-xs text-gray-500 px-3 pt-4 pb-1 tracking-wide">SITE</div>
+            <a href="01090101_voice_list.html" class="flex items-center px-3 py-2.5 rounded-lg text-gray-400">サイト管理</a>
+            <a href="01100101_daily_sales.html" class="flex items-center px-3 py-2.5 rounded-lg text-gray-400">売上管理</a>
+            <a href="01110101_agency_list.html" class="flex items-center px-3 py-2.5 rounded-lg text-gray-400">広告管理</a>
+        </nav>
+    </aside>
+
+    <!-- ヘッダー -->
+    <header class="sticky top-0 z-30 flex items-center gap-3 px-4 py-3 bg-white border-b border-gray-200">
+        <button onclick="toggleMenu()" aria-label="メニュー" class="shrink-0 text-gray-500 border border-gray-200 rounded-lg p-2 text-base leading-none">&#9776;</button>
+        <button onclick="history.back()" aria-label="戻る" class="shrink-0 text-gray-500 border border-gray-200 rounded-lg p-2 text-base leading-none">&#8592;</button>
+        <div class="flex-1 min-w-0">
+            <div class="text-base font-bold text-gray-900 truncate">会員詳細</div>
+        </div>
+        <button class="relative shrink-0 border border-gray-200 rounded-lg p-2 text-gray-500 text-sm">
+            &#128276;
+            <span class="absolute -top-1 -right-1 bg-red-500 text-white text-[9px] rounded-full w-4 h-4 flex items-center justify-center">3</span>
+        </button>
+    </header>
+
+    <main class="flex-1 overflow-y-auto pb-24">
+
+        <!-- 会員サマリーカード -->
+        <div class="bg-brand-600 text-white px-4 pt-4 pb-5">
+            <div class="text-[11px] opacity-80 mb-1">本登録会員(LINE)</div>
+            <div class="flex items-center justify-between">
+                <div>
+                    <div class="text-xl font-bold leading-none">00005 さん</div>
+                    <div class="text-[11px] opacity-80 mt-1">line: yam ／ id: 00005</div>
+                </div>
+                <div class="flex gap-2">
+                    <button class="bg-white/20 active:bg-white/30 text-[11px] px-3 py-1.5 rounded-lg">ログイン</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 主要ステータス（横スクロールでもよい簡易カード） -->
+        <div class="grid grid-cols-2 gap-3 px-4 -mt-3">
+            <div class="bg-white rounded-xl border border-gray-200 shadow-sm p-3">
+                <div class="text-[10px] text-gray-500">保有ポイント</div>
+                <div class="text-base font-bold">3,319<span class="text-xs font-normal">pt</span></div>
+            </div>
+            <div class="bg-white rounded-xl border border-gray-200 shadow-sm p-3">
+                <div class="text-[10px] text-gray-500">購入金額</div>
+                <div class="text-base font-bold">&yen;0</div>
+            </div>
+            <div class="bg-white rounded-xl border border-gray-200 shadow-sm p-3">
+                <div class="text-[10px] text-gray-500">購入回数</div>
+                <div class="text-base font-bold">0回</div>
+            </div>
+            <div class="bg-white rounded-xl border border-gray-200 shadow-sm p-3">
+                <div class="text-[10px] text-gray-500">最終ログイン</div>
+                <div class="text-sm font-semibold">2026-07-29</div>
+            </div>
+        </div>
+
+        <!-- タブ切替（ユーザー情報／メッセージ／タイムライン） -->
+        <div class="mt-5 px-4">
+            <div class="grid grid-cols-3 bg-gray-100 rounded-lg p-1 text-xs font-medium">
+                <button onclick="switchTab('info')" data-tab="info" class="tab-btn py-2 rounded-md bg-white shadow-sm text-gray-900">ユーザー情報</button>
+                <button onclick="switchTab('msg')" data-tab="msg" class="tab-btn py-2 rounded-md text-gray-500">メッセージ</button>
+                <button onclick="switchTab('timeline')" data-tab="timeline" class="tab-btn py-2 rounded-md text-gray-500">タイムライン</button>
+            </div>
+        </div>
+
+        <!-- ユーザー情報タブ -->
+        <div id="tab-info" class="tab-panel px-4 mt-4 space-y-3">
+            <div class="bg-white rounded-xl border border-gray-200 p-4 space-y-3">
+                <div class="grid grid-cols-2 gap-3">
+                    <div><label class="block text-[11px] font-medium text-gray-600 mb-1">会員状態</label>
+                        <select class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm"><option>本登録</option></select></div>
+                    <div><label class="block text-[11px] font-medium text-gray-600 mb-1">メール状態</label>
+                        <select class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm"><option>未判定</option></select></div>
+                </div>
+                <div><label class="block text-[11px] font-medium text-gray-600 mb-1">LINE状態</label>
+                    <select class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm"><option>LINE未ブロック</option></select></div>
+                <div class="grid grid-cols-2 gap-3">
+                    <div><label class="block text-[11px] font-medium text-gray-600 mb-1">会員No</label>
+                        <input type="text" value="5" disabled class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm bg-gray-50 text-gray-400"></div>
+                    <div><label class="block text-[11px] font-medium text-gray-600 mb-1">ID</label>
+                        <input type="text" value="00005" disabled class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm bg-gray-50 text-gray-400"></div>
+                </div>
+                <div><label class="block text-[11px] font-medium text-gray-600 mb-1">ニックネーム</label>
+                    <input type="text" value="00005" class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm"></div>
+                <div><label class="block text-[11px] font-medium text-gray-600 mb-1">Email</label>
+                    <input type="text" value="yam_????@icloud.com" class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm"></div>
+                <div><label class="block text-[11px] font-medium text-gray-600 mb-1">PCMAIL</label>
+                    <input type="text" value="syou??????@gmail.com" class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm"></div>
+                <div><label class="block text-[11px] font-medium text-gray-600 mb-1">LINEメール</label>
+                    <input type="text" value="yam_????@icloud.com" class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm"></div>
+                <div><label class="block text-[11px] font-medium text-gray-600 mb-1">LINE名</label>
+                    <input type="text" value="yam" class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm"></div>
+                <div class="grid grid-cols-2 gap-3">
+                    <div><label class="block text-[11px] font-medium text-gray-600 mb-1">利用LineNo</label>
+                        <input type="text" value="1" class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm"></div>
+                    <div><label class="block text-[11px] font-medium text-gray-600 mb-1">パスワード</label>
+                        <input type="text" value="********" class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm"></div>
+                </div>
+                <div><label class="block text-[11px] font-medium text-gray-600 mb-1">広告コード</label>
+                    <input type="text" value="コード無し" class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm"></div>
+                <div><label class="block text-[11px] font-medium text-gray-600 mb-1">登録IP</label>
+                    <input type="text" value="147.92.179.111" disabled class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm bg-gray-50 text-gray-400"></div>
+                <div><label class="block text-[11px] font-medium text-gray-600 mb-1">ログインIP</label>
+                    <input type="text" value="118.238.87.158" disabled class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm bg-gray-50 text-gray-400"></div>
+            </div>
+
+            <div class="bg-white rounded-xl border border-gray-200 p-4">
+                <div class="font-semibold text-sm mb-2">銀行振り込み処理</div>
+                <div class="flex gap-2">
+                    <input type="text" placeholder="point" class="flex-1 min-w-0 border border-gray-200 rounded-lg px-2 py-2 text-sm">
+                    <button class="bg-brand-600 text-white text-xs px-4 rounded-lg shrink-0">実行</button>
+                </div>
+            </div>
+            <div class="bg-white rounded-xl border border-gray-200 p-4">
+                <div class="font-semibold text-sm mb-1">手動ポイント加算・減算</div>
+                <p class="text-[11px] text-gray-400 mb-2">減算の場合は - にしてください</p>
+                <div class="flex gap-2">
+                    <input type="text" placeholder="point" class="flex-1 min-w-0 border border-gray-200 rounded-lg px-2 py-2 text-sm">
+                    <button class="bg-brand-600 text-white text-xs px-4 rounded-lg shrink-0">実行</button>
+                </div>
+            </div>
+
+            <details class="bg-white rounded-xl border border-gray-200">
+                <summary class="p-4 text-sm text-gray-700 font-medium">参加グループ一覧</summary>
+                <div class="px-4 pb-4 text-xs text-gray-500">対象データなし</div>
+            </details>
+            <details class="bg-white rounded-xl border border-gray-200">
+                <summary class="p-4 text-sm text-gray-700 font-medium">購入中の商品一覧</summary>
+                <div class="px-4 pb-4 text-xs text-gray-500">対象データなし</div>
+            </details>
+            <details class="bg-white rounded-xl border border-gray-200">
+                <summary class="p-4 text-sm text-gray-700 font-medium">表示中商品一覧</summary>
+                <div class="px-4 pb-4 text-xs text-gray-500">対象データなし</div>
+            </details>
+            <details class="bg-white rounded-xl border border-gray-200 mb-2">
+                <summary class="p-4 text-sm text-gray-700 font-medium">過去購入商品一覧</summary>
+                <div class="px-4 pb-4 text-xs text-gray-500">対象データなし</div>
+            </details>
+        </div>
+
+        <!-- メッセージタブ -->
+        <div id="tab-msg" class="tab-panel px-4 mt-4 hidden">
+            <div class="bg-white rounded-xl border border-gray-200 p-4 text-sm text-gray-500 text-center py-10">
+                メッセージ履歴はまだありません
+            </div>
+        </div>
+
+        <!-- タイムラインタブ -->
+        <div id="tab-timeline" class="tab-panel px-4 mt-4 hidden">
+            <div class="bg-white rounded-xl border border-gray-200 p-4 text-sm text-gray-500 text-center py-10">
+                タイムラインはまだありません
+            </div>
+        </div>
+
+    </main>
+
+    <!-- フッター固定アクションバー -->
+    <div class="sticky bottom-0 z-30 bg-white border-t border-gray-200 p-3 flex gap-2">
+        <button class="flex-1 border border-gray-300 text-gray-700 text-sm font-medium py-2.5 rounded-lg">ログアウト</button>
+        <button class="flex-1 bg-brand-600 active:bg-brand-700 text-white text-sm font-medium py-2.5 rounded-lg">更新</button>
+    </div>
+
+</div>
+
+<script>
+function toggleMenu(){
+    document.getElementById('sidebar').classList.toggle('-translate-x-full');
+    document.getElementById('sidebarOverlay').classList.toggle('hidden');
+}
+function switchTab(name){
+    document.querySelectorAll('.tab-panel').forEach(function(el){ el.classList.add('hidden'); });
+    document.getElementById('tab-' + name).classList.remove('hidden');
+    document.querySelectorAll('.tab-btn').forEach(function(btn){
+        if (btn.dataset.tab === name) {
+            btn.classList.add('bg-white','shadow-sm','text-gray-900');
+            btn.classList.remove('text-gray-500');
+        } else {
+            btn.classList.remove('bg-white','shadow-sm','text-gray-900');
+            btn.classList.add('text-gray-500');
+        }
+    });
+}
+</script>
+
+</body>
+</html>

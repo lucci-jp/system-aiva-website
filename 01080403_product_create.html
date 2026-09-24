@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><title>商品の編集 - SystemRocky</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = { theme: { extend: { colors: {
+    brand: { 50: '#EEF2FF', 100: '#E0E7FF', 500: '#6366F1', 600: '#4F46E5', 700: '#4338CA' },
+    side: { 900: '#0D0D0D', 800: '#191919' },
+  }}}}
+</script>
+</head>
+<body class="bg-gray-50">
+<div class="flex min-h-screen">
+    <div id="sidebarOverlay" onclick="toggleSidebar()" class="hidden fixed inset-0 bg-black/40 z-30 lg:hidden"></div>
+
+    <aside id="sidebar" class="w-64 max-w-[80vw] bg-side-900 text-white flex flex-col shrink-0 min-h-screen fixed inset-y-0 left-0 z-40 -translate-x-full transition-transform duration-200 lg:translate-x-0 lg:static lg:z-auto">
+        <div class="flex items-center gap-2 px-5 py-5">
+            <div class="w-8 h-8 rounded-lg bg-brand-600 flex items-center justify-center font-bold">S</div>
+            <div><div class="font-bold leading-none">SystemRocky</div><div class="text-xs text-gray-500">ADMIN</div></div>
+        </div>
+        <div class="mx-4 mb-4 p-3 bg-side-800 rounded-lg flex items-center gap-2">
+            <div class="w-7 h-7 rounded bg-brand-500 flex items-center justify-center text-xs font-bold">本</div>
+            <div class="text-xs"><div class="font-medium">本社管理者</div><div class="text-gray-500">Head Office</div></div>
+        </div>
+        <nav class="flex-1 px-3 space-y-1 overflow-y-auto">
+            <div class="text-xs text-gray-500 px-3 pt-2 pb-1 tracking-wide">MAIN</div>
+            <a href="01030101_member_search.html" class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white"><span>会員管理</span></a>
+<a href="01040101_group_list.html" class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white"><span>グループ管理</span></a>
+<a href="01050101_tag_list.html" class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white"><span>タグ管理</span></a>
+<a href="01060101_step_list.html" class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white"><span>マガジン管理</span></a>
+<a href="01070101_new_message.html" class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white"><span>問合せ管理</span></a>
+<a href="01080401_product_list.html" class="flex items-center justify-between px-3 py-2 rounded-lg text-sm bg-brand-600 text-white font-medium"><span>商品管理</span></a>
+            <div class="text-xs text-gray-500 px-3 pt-4 pb-1 tracking-wide">SITE</div>
+            <a href="01090101_voice_list.html" class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white"><span>サイト管理</span></a>
+<a href="01100101_daily_sales.html" class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white"><span>売上管理</span></a>
+<a href="01110101_agency_list.html" class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white"><span>広告管理</span></a>
+            <div class="text-xs text-gray-500 px-3 pt-4 pb-1 tracking-wide">SYSTEM</div>
+            <a href="#" class="flex items-center px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">マスター管理</a>
+        </nav>
+        <div class="p-3 border-t border-white/10 flex items-center gap-2">
+            <div class="w-8 h-8 rounded-full bg-brand-500 flex items-center justify-center text-xs font-bold">AJ</div>
+            <div class="text-xs"><div class="font-medium">jukawaOP</div><div class="text-gray-500">オペレーター</div></div>
+        </div>
+    </aside>
+    
+<div class="flex-1 min-w-0">
+
+    <header class="flex items-center justify-between px-8 py-4 bg-white border-b border-gray-200">
+        <div><div class="text-xl font-bold text-gray-900">商品の編集(新規作成)</div></div>
+        <div class="flex items-center gap-3">
+            <div class="relative hidden lg:block">
+                <input type="text" placeholder="検索..." class="w-72 border border-gray-200 rounded-lg pl-9 pr-3 py-2 text-sm bg-gray-50">
+                <span class="absolute left-3 top-2.5 text-gray-400 text-sm">&#128269;</span>
+            </div>
+            <button class="relative border border-gray-200 rounded-lg p-2 text-gray-500">
+                &#128276;<span class="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] rounded-full w-4 h-4 flex items-center justify-center">3</span>
+            </button>
+            <div class="w-9 h-9 rounded-full bg-brand-600 text-white flex items-center justify-center text-sm font-bold">OP</div>
+        </div>
+    </header>
+    
+<main class="p-8 space-y-6"><div class="bg-white rounded-xl border border-gray-200 shadow-sm p-6 ">
+        <div class="flex items-center justify-between mb-4 pb-3 border-b border-gray-100">
+            <div class="font-semibold text-gray-800">商品の編集</div>
+        </div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-3">
+    <div><label class="block text-xs font-medium text-gray-600 mb-1">商品No.</label><div class="text-sm py-2">(自動採番)</div></div>
+    <div><label class="block text-xs font-medium text-gray-600 mb-1">タイトル</label>
+        <input type="text" value="" placeholder=""  class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white"></div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-3">
+    <div><label class="block text-xs font-medium text-gray-600 mb-1">表示位置</label>
+        <input type="text" value="" placeholder=""  class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white"></div>
+    <div><label class="block text-xs font-medium text-gray-600 mb-1">消費POINT</label>
+        <input type="text" value="" placeholder=""  class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white"></div>
+    <div><label class="block text-xs font-medium text-gray-600 mb-1">購入者フラグ</label>
+        <input type="text" value="" placeholder=""  class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white"></div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-3">
+    <div><label class="block text-xs font-medium text-gray-600 mb-1">商品タイプ</label>
+        <select class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white"><option>参加商品</option></select></div>
+    <div><label class="block text-xs font-medium text-gray-600 mb-1">提供表記</label>
+        <select class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white"><option>-- 選択 --</option></select></div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-3">
+    <div><label class="block text-xs font-medium text-gray-600 mb-1">準備開始</label>
+        <input type="text" value="2026-07-11 00:00:00" placeholder=""  class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white"></div>
+    <div><label class="block text-xs font-medium text-gray-600 mb-1">参加開始</label>
+        <input type="text" value="2026-07-11 00:00:00" placeholder=""  class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white"></div>
+    <div><label class="block text-xs font-medium text-gray-600 mb-1">参加締切</label>
+        <input type="text" value="2026-07-18 00:00:00" placeholder=""  class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white"></div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+    <div><label class="block text-xs font-medium text-gray-600 mb-1">買目開始</label>
+        <input type="text" value="2026-07-18 12:00:00" placeholder=""  class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white"></div>
+    <div><label class="block text-xs font-medium text-gray-600 mb-1">表示終了</label>
+        <input type="text" value="2026-07-18 23:59:59" placeholder=""  class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white"></div>
+</div>
+<div><label class="block text-xs font-medium text-gray-600 mb-1">商品情報メモ</label>
+        <textarea rows="3" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm"></textarea></div>
+<div class="mt-3">
+    <div><label class="block text-xs font-medium text-gray-600 mb-1">HTML(買い目前)</label>
+        <textarea rows="10" class="w-full border border-gray-200 rounded-lg px-3 py-2 font-mono text-xs">&lt;div class="plan__bg plan__bg--buy"&gt;
+  &lt;div class="plan__inner"&gt;
+    &lt;div class="plan__heading"&gt;
+      &lt;figure class="plan__border"&gt;
+        &lt;img src="img/plan-border.webp" alt="" loading="lazy" width="" height=""&gt;
+      &lt;/figure&gt;
+      &lt;div class="plan__frame-sentence"&gt;
+        &lt;p class="plan__frame-text-buy"&gt;
+          プランへのご参加ありがとうございます。&lt;br&gt;
+          買い目の公開はレース当日の12時頃からでございます。&lt;br&gt;
+          記載公開時間以降に、&lt;br&gt;
+          本ページで買い目の公開を致します。
+        &lt;/p&gt;
+      &lt;/div&gt;
+      &lt;figure class="plan__border"&gt;
+        &lt;img src="img/plan-border.webp" alt="" loading="lazy" width="" height=""&gt;
+      &lt;/figure&gt;
+    &lt;/div&gt;</textarea></div>
+</div>
+<div class="mt-4"><button class="bg-brand-600 hover:bg-brand-700 text-white text-sm font-medium px-5 py-2.5 rounded-lg">更新</button></div>
+</div></main>
+</div></div><script>
+function toggleSidebar(){
+    document.getElementById('sidebar').classList.toggle('-translate-x-full');
+    document.getElementById('sidebarOverlay').classList.toggle('hidden');
+}
+</script>
+</body></html>

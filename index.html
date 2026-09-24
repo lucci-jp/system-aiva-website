@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>画面一覧(デザイン反映版)</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 p-4 sm:p-10">
+    <h1 class="text-xl font-bold mb-2">画面一覧(デザイン反映版)</h1>
+    <p class="text-xs text-gray-500 mb-6">2026-09-24更新: 全画面にスマホ表示対応（ハンバーガーメニュー化・グリッド1カラム化・テーブル横スクロール）。01030103はスマホ専用レイアウトとして再構成。</p>
+
+    <h2 class="text-sm font-semibold text-gray-500 mb-2">会員管理</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mb-8">
+        <a href="01030101_member_search.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">01030101 会員検索</a>
+        <a href="01030102_member_detail.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">01030102 会員詳細</a>
+        <a href="01030103_member_detail_mobile.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">01030103 会員詳細スマホ</a>
+        <a href="01030104_code_search.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">01030104 コード特定</a>
+        <a href="01030201_point_log.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">01030201 ポイント変動ログ</a>
+        <a href="01030301_duplicate_list.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">01030301 重複会員一覧</a>
+    </div>
+
+    <h2 class="text-sm font-semibold text-gray-500 mb-2">グループ管理</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mb-8">
+        <a href="01040101_group_list.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">01040101 グループ一覧</a>
+        <a href="01040102_group_detail.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">01040102 グループ詳細</a>
+        <a href="01040103_group_create.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">01040103 グループ新規追加</a>
+    </div>
+
+    <h2 class="text-sm font-semibold text-gray-500 mb-2">タグ管理</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mb-8">
+        <a href="01050101_tag_list.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">01050101 タグ一覧</a>
+        <a href="01050102_tag_edit.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">01050102 カスタムタグ編集</a>
+    </div>
+
+    <h2 class="text-sm font-semibold text-gray-500 mb-2">マガジン管理</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl">
+        <a href="01060101_step_list.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">01060101 ステップ配信</a>
+        <a href="01060102_step_create.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">01060102 ステップ新規作成</a>
+        <a href="01060103_step_edit.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">01060103 ステップメール編集</a>
+        <a href="01060104_auto_reply.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">01060104 自動返信</a>
+        <a href="01060201_template_list.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">01060201 ひな形一覧</a>
+        <a href="01060202_template_create.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">01060202 ひな形新規作成</a>
+        <a href="01060203_template_edit.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">01060203 ひな形編集</a>
+        <a href="01060204_broadcast_create.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">01060204 メールマガジン新規作成</a>
+        <a href="01060301_broadcast_history.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">01060301 配信送信履歴・予約</a>
+        <a href="01060302_broadcast_edit_before.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">01060302 配信編集(配信前)</a>
+        <a href="01060303_broadcast_edit_after.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">01060303 配信編集(配信後)</a>
+    </div>
+
+    <h2 class="text-sm font-semibold text-gray-500 mb-2">問合せ管理</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl">
+        <a href="01070101_new_message.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">01070101 新規メッセージ</a>
+        <a href="01070201_unreplied.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">01070201 未返信メッセージ</a>
+        <a href="01070202_reply.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">01070202 メッセージ返信</a>
+        <a href="01070203_unreplied_member.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">01070203 未返信メッセージ会員</a>
+        <a href="01070301_replied.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">01070301 返信済みメッセージ</a>
+        <a href="01070302_replied_reply.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">01070302 メッセージ返信(返信済み側)</a>
+        <a href="01070401_sent_index.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">01070401 送信済みメッセージ一覧</a>
+        <a href="01070402_sent_confirm.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">01070402 メッセージ確認</a>
+        <a href="01070403_sent_confirm2.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">01070403 送信済メッセージ確認</a>
+    </div>
+
+    <h2 class="text-sm font-semibold text-gray-500 mb-2">商品管理</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl">
+        <a href="01080101_product_calendar.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">01080101 商品一覧カレンダー</a>
+        <a href="01080201_result_product_list.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">01080201 実績商品一覧</a>
+        <a href="01080301_image_uploader.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">01080301 画像アップローダー</a>
+        <a href="01080401_product_list.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">01080401 商品一覧</a>
+        <a href="01080402_product_detail.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">01080402 商品の編集(詳細)</a>
+        <a href="01080403_product_create.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">01080403 商品の編集(新規作成)</a>
+    </div>
+
+    <h2 class="text-sm font-semibold text-gray-500 mb-2">サイト管理</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl">
+        <a href="01090101_voice_list.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">01090101 会員様の声(新規)</a>
+        <a href="01090102_voice_detail.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">01090102 会員様の声(詳細)</a>
+        <a href="01090201_result_list.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">01090201 実績(新規・一覧)</a>
+        <a href="01090202_result_edit.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">01090202 実績編集</a>
+        <a href="01090301_line_config_index.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">01090301 LINEコンフィグ一覧</a>
+        <a href="01090302_line_a_create.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">01090302 LINEログインセッティング(新規)</a>
+        <a href="01090303_line_a_edit.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">01090303 LINEログインセッティング(編集)</a>
+        <a href="01090304_line_b_create.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">01090304 LINEメッセージセッティング(新規)</a>
+        <a href="01090305_line_b_edit.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">01090305 LINEメッセージセッティング(編集)</a>
+        <a href="01090401_site_config_list.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">01090401 サイトコンフィグ一覧</a>
+        <a href="01090405_replace_system.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">01090405 サイト内置換システム</a>
+        <a href="01090406_ip_replace_system.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">01090406 特定IP置換システム</a>
+        <a href="01090407_ng_word.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">01090407 NGワード</a>
+    </div>
+
+    <h2 class="text-sm font-semibold text-gray-500 mb-2">売上管理</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl">
+        <a href="01100101_daily_sales.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">01100101 日別売上</a>
+        <a href="01100201_monthly_sales.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">01100201 月別売上</a>
+        <a href="01100301_monthly_recovery_rate.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">01100301 月別回収率</a>
+    </div>
+
+    <h2 class="text-sm font-semibold text-gray-500 mb-2">広告管理</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl">
+        <a href="01110101_agency_list.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">01110101 代理店一覧</a>
+        <a href="01110102_agency_create.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">01110102 代理店新規作成</a>
+        <a href="01110103_agency_edit.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">01110103 代理店編集</a>
+        <a href="01110201_ad_effect.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">01110201 広告効果</a>
+        <a href="01110202_ad_code_detail.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">01110202 広告コード詳細(編集)</a>
+        <a href="01110203_ad_code_view.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">01110203 広告コード詳細(閲覧)</a>
+        <a href="01110301_code_error_list.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">01110301 コードミス会員一覧 ※会員管理配下</a>
+    </div>
+
+    <h2 class="text-sm font-semibold text-gray-500 mb-2">マスター管理 - 広告管理(全社)</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mb-8">
+        <a href="02020101_master_ad_effect.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">02020101 通しコード別広告集計</a>
+        <a href="02020102_site_recovery_rate.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">02020102 サイト別回収率</a>
+        <a href="02020201_master_code_list.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">02020201 通しコード一覧</a>
+        <a href="02020202_master_code_detail.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">02020202 通しコード詳細</a>
+        <a href="02020301_master_agency_list.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">02020301 通し代理店一覧</a>
+        <a href="02020302_master_agency_detail.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">02020302 通し代理店詳細</a>
+        <a href="02020303_master_code_create.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">02020303 通しコード新規作成</a>
+        <a href="02020304_master_agency_create.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">02020304 通し代理店新規作成</a>
+    </div>
+
+    <h2 class="text-sm font-semibold text-gray-500 mb-2">マスター管理 - コンフィグ</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mb-8">
+        <a href="02030101_forbidden_domain.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">02030101 禁止ドメイン</a>
+        <a href="02030102_forbidden_address.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">02030102 禁止アドレス</a>
+        <a href="02030103_forbidden_ip.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">02030103 禁止IP</a>
+        <a href="02030104_allowed_domain.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">02030104 許可ドメイン</a>
+        <a href="02030105_forward_setting.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">02030105 転送設定</a>
+    </div>
+
+    <h2 class="text-sm font-semibold text-gray-500 mb-2">マスター管理 - オペレーター管理</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl">
+        <a href="02040101_operator_list.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">02040101 オペレーター一覧</a>
+        <a href="02040102_operator_detail.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">02040102 オペレーター詳細</a>
+        <a href="02040103_operator_create.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">02040103 オペレーター新規追加</a>
+        <a href="02040104_operator_activity_log.html" class="block bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md">02040104 オペレーター行動ログ</a>
+    </div>
+
+    <p class="text-xs text-gray-400 mt-8">※ ユーザー管理(02010101 会員検索)は画像未提供のため保留中</p>
+</body>
+</html>
