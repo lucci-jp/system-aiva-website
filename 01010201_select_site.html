@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>サイト選択 - SystemRocky</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          brand: {
+            50: '#EEF2FF', 100: '#E0E7FF', 500: '#6366F1', 600: '#4F46E5', 700: '#4338CA',
+          },
+          side: { 900: '#0D0D0D', 800: '#191919' },
+        }
+      }
+    }
+  }
+</script>
+
+</head>
+<body class="bg-side-900 min-h-screen flex items-center justify-center p-4">
+<!--
+  01010201 サイト選択
+  ログイン(01010101)成功直後に表示する画面。まだサイトが確定していない段階のため
+  他画面のようなサイドバー付きレイアウトは使わず、ログイン画面同様に中央寄せのカードで構成する。
+  上段: ログイン中ユーザーの情報 / 下段: 担当サイトの選択リスト
+  選択後は選択サイトがセッションに確定し、通常の管理画面(サイドバー付き)へ遷移する。
+-->
+<div class="w-full max-w-lg">
+
+    <div class="flex items-center gap-2 justify-center mb-6">
+        <div class="w-9 h-9 rounded-lg bg-brand-600 flex items-center justify-center font-bold text-white">S</div>
+        <div class="text-white font-bold">SystemRocky ADMIN</div>
+    </div>
+
+    <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+
+        <!-- ユーザー情報(画面項目仕様 通番7-8: ニックネーム/LINE名) -->
+        <div class="bg-brand-600 text-white px-6 py-5">
+            <div class="flex items-center gap-3">
+                <div class="w-11 h-11 rounded-full bg-white/20 flex items-center justify-center font-bold">AJ</div>
+                <div>
+                    <div class="text-[11px] opacity-80">ニックネーム</div>
+                    <div class="font-bold leading-none">jukawaOP</div>
+                    <div class="text-[11px] opacity-80 mt-2">LINE名</div>
+                    <div class="text-sm">yamada_taro</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- サイト(画面項目仕様 通番9-11: 「サイト」見出し/サイトリスト(リストボックス)/サイト選択(ボタン)) -->
+        <div class="p-6">
+            <div class="font-semibold text-gray-800 mb-3">サイト</div>
+
+            <form method="POST" action="#">
+                <label class="block text-xs font-medium text-gray-600 mb-1">サイトリスト</label>
+                <select name="site_id" class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm bg-white mb-4">
+                    <option value="1">サイトA（競艇）</option>
+                    <option value="2">サイトB（競艇）</option>
+                    <option value="3">サイトC（競輪）</option>
+                </select>
+                <button type="submit" class="w-full bg-brand-600 hover:bg-brand-700 text-white text-sm font-medium py-2.5 rounded-lg">サイト選択</button>
+            </form>
+
+            <!-- 担当サイトが無い場合の表示例(通常は非表示) -->
+            <div class="hidden text-center text-sm text-gray-400 py-8">担当しているサイトがありません。管理者にお問い合わせください。</div>
+        </div>
+    </div>
+
+    <div class="text-center mt-4">
+        <form method="POST" action="#">
+            <button type="submit" class="text-xs text-gray-400 hover:text-white">ログアウト</button>
+        </form>
+    </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ログイン - SystemRocky</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          brand: {
+            50: '#EEF2FF', 100: '#E0E7FF', 500: '#6366F1', 600: '#4F46E5', 700: '#4338CA',
+          },
+          side: { 900: '#0D0D0D', 800: '#191919' },
+        }
+      }
+    }
+  }
+</script>
+
+</head>
+<body class="bg-side-900 min-h-screen flex items-center justify-center p-4">
+<!--
+  01010101 ログイン
+  画面項目仕様(通番1-6): 画面表示タイトル(ラベル="systemrocky") / IDタイトル(ラベル="ID") /
+  ID入力(テキスト、全角/半角ｶﾅ/英数記号入力可、30桁) / PASSタイトル(ラベル="PASS") /
+  PASS入力(テキスト、30桁) / ログイン(ボタン)
+  ログイン成功後は OperatorSession::setOperator() でセッションへユーザー共通情報を格納した上で、
+  サイト選択(01010201)へ遷移する。
+-->
+<div class="w-full max-w-sm">
+
+    <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+        <div class="px-8 pt-10 pb-8">
+
+            <!-- 画面表示タイトル(通番1) -->
+            <div class="flex flex-col items-center mb-8">
+                <div class="w-12 h-12 rounded-xl bg-brand-600 flex items-center justify-center font-bold text-white text-xl mb-3">S</div>
+                <div class="text-lg font-bold text-gray-900 tracking-wide">systemrocky</div>
+                <div class="text-xs text-gray-400 mt-1">ADMIN LOGIN</div>
+            </div>
+
+            <form method="POST" action="#" class="space-y-4">
+
+                <!-- IDタイトル/ID入力(通番2-3) -->
+                <div>
+                    <label class="block text-xs font-medium text-gray-600 mb-1">ID</label>
+                    <input type="text" name="login_id" maxlength="30" placeholder="ログインID"
+                           class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm bg-white">
+                </div>
+
+                <!-- PASSタイトル/PASS入力(通番4-5) -->
+                <div>
+                    <label class="block text-xs font-medium text-gray-600 mb-1">PASS</label>
+                    <input type="password" name="password" maxlength="30" placeholder="パスワード"
+                           class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm bg-white">
+                </div>
+
+                <!-- エラー時表示例(通常は非表示。E0011: ID/パスワードが一致しません 等) -->
+                <div class="hidden bg-red-50 border border-red-100 text-red-600 text-xs rounded-lg px-3 py-2">
+                    IDまたはパスワードが正しくありません。
+                </div>
+
+                <!-- ログイン(通番6) -->
+                <a href="01010201_select_site.html" class="block w-full text-center bg-brand-600 hover:bg-brand-700 text-white text-sm font-medium py-2.5 rounded-lg">
+                    ログイン
+                </a>
+            </form>
+
+        </div>
+    </div>
+
+    <p class="text-center text-[11px] text-gray-500 mt-4">ログイン後、担当サイトの選択画面(01010201)に進みます。</p>
+</div>
+</body>
+</html>

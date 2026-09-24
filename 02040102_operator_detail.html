@@ -35,7 +35,7 @@
 <a href="01100101_daily_sales.html" class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white"><span>売上管理</span></a>
 <a href="01110101_agency_list.html" class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white"><span>広告管理</span></a>
             <div class="text-xs text-gray-500 px-3 pt-4 pb-1 tracking-wide">MASTER(本社専用)</div>
-            <a href="#" class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white"><span>ユーザー管理</span></a>
+            <a href="02010101_master_member_search.html" class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white"><span>ユーザー管理</span></a>
 <a href="02020101_master_ad_effect.html" class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white"><span>広告管理(全社)</span></a>
 <a href="02030101_forbidden_domain.html" class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white"><span>コンフィグ</span></a>
 <a href="02040101_operator_list.html" class="flex items-center justify-between px-3 py-2 rounded-lg text-sm bg-brand-600 text-white font-medium"><span>オペレーター管理</span></a>
@@ -48,8 +48,13 @@
     
 <div class="flex-1 min-w-0">
 
-    <header class="flex items-center justify-between px-8 py-4 bg-white border-b border-gray-200">
-        <div><div class="text-xl font-bold text-gray-900">オペレーター詳細</div></div>
+    <header class="flex items-center justify-between px-4 lg:px-8 py-4 bg-white border-b border-gray-200">
+        <div class="flex items-center gap-3 min-w-0">
+            <button onclick="toggleSidebar()" aria-label="メニュー" class="lg:hidden shrink-0 text-gray-500 border border-gray-200 rounded-lg p-2 text-base leading-none">&#9776;</button>
+            <div class="min-w-0">
+                <div class="text-lg lg:text-xl font-bold text-gray-900 truncate">オペレーター詳細</div>
+            </div>
+        </div>
         <div class="flex items-center gap-3">
             <div class="relative hidden lg:block">
                 <input type="text" placeholder="検索..." class="w-72 border border-gray-200 rounded-lg pl-9 pr-3 py-2 text-sm bg-gray-50">

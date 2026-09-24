@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>システムエラー - SystemRocky</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          brand: {
+            50: '#EEF2FF', 100: '#E0E7FF', 500: '#6366F1', 600: '#4F46E5', 700: '#4338CA',
+          },
+          side: { 900: '#0D0D0D', 800: '#191919' },
+        }
+      }
+    }
+  }
+</script>
+
+</head>
+<body class="bg-side-900 min-h-screen flex items-center justify-center p-4">
+<!--
+  01020201 システムエラー
+  画面ID: 01020201 (大01:管理者機能 / 中02:メイン / 小02:システムエラー / gcode01)
+  システム側で予期しないエラーが発生した際のフォールバック表示画面。
+  まだ画面遷移が確定していない/継続不能な状態を想定し、他の異常系画面
+  (01010101ログイン, 01010201サイト選択)と同様、サイドバー無しの中央寄せカードで構成する。
+
+  画面項目仕様(通番1-3):
+   1. エラータイトル(ラベル)     初期表示値: システムエラーが発生しました
+   2. エラーメッセージ(ラベル)   初期表示値: しばらくしてから再度お試しください。改善しない場合は管理者へご連絡ください。
+   3. トップへ戻る(ボタン)       押下時: トップメニューへ遷移
+-->
+<div class="w-full max-w-md">
+
+    <div class="flex items-center gap-2 justify-center mb-6">
+        <div class="w-9 h-9 rounded-lg bg-brand-600 flex items-center justify-center font-bold text-white">S</div>
+        <div class="text-white font-bold">SystemRocky ADMIN</div>
+    </div>
+
+    <div class="bg-white rounded-2xl shadow-xl overflow-hidden text-center">
+
+        <div class="px-8 pt-10 pb-8">
+
+            <!-- アイコン -->
+            <div class="w-16 h-16 rounded-full bg-red-50 text-red-500 flex items-center justify-center mx-auto mb-5 text-3xl font-bold">
+                !
+            </div>
+
+            <!-- エラータイトル(通番1) -->
+            <div class="text-lg font-bold text-gray-900 mb-2">システムエラーが発生しました</div>
+
+            <!-- エラーメッセージ(通番2) -->
+            <p class="text-sm text-gray-500 leading-relaxed mb-8">
+                しばらくしてから再度お試しください。<br>
+                改善しない場合は管理者へご連絡ください。
+            </p>
+
+            <!-- トップへ戻る(通番3) -->
+            <a href="#" class="block w-full text-center bg-brand-600 hover:bg-brand-700 text-white text-sm font-medium py-2.5 rounded-lg">
+                トップへ戻る
+            </a>
+        </div>
+
+    </div>
+
+    <p class="text-center text-[11px] text-gray-500 mt-4">エラーコード: SYS-500（参考情報・実データはサーバー側ログに準拠）</p>
+</div>
+</body>
+</html>
