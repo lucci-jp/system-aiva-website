@@ -8,39 +8,41 @@
     side: { 900: '#0D0D0D', 800: '#191919' },
   }}}}
 </script>
+<style>summary::-webkit-details-marker{display:none}summary::marker{content:""}</style>
 </head>
 <body class="bg-gray-50">
 <div class="flex min-h-screen">
     <div id="sidebarOverlay" onclick="toggleSidebar()" class="hidden fixed inset-0 bg-black/40 z-30 lg:hidden"></div>
 
     <aside id="sidebar" class="w-64 max-w-[80vw] bg-side-900 text-white flex flex-col shrink-0 min-h-screen fixed inset-y-0 left-0 z-40 -translate-x-full transition-transform duration-200 lg:translate-x-0 lg:static lg:z-auto">
-        <div class="flex items-center gap-2 px-5 py-5">
-            <div class="w-8 h-8 rounded-lg bg-brand-600 flex items-center justify-center font-bold">S</div>
-            <div><div class="font-bold leading-none">SystemRocky</div><div class="text-xs text-gray-500">ADMIN</div></div>
-        </div>
+
+        <div class="pt-5"></div>
         <div class="mx-4 mb-4 p-3 bg-side-800 rounded-lg flex items-center gap-2">
-            <div class="w-7 h-7 rounded bg-brand-500 flex items-center justify-center text-xs font-bold">本</div>
-            <div class="text-xs"><div class="font-medium">本社管理者</div><div class="text-gray-500">Head Office</div></div>
+            <div class="w-7 h-7 rounded-full bg-brand-500 flex items-center justify-center text-xs font-bold">本</div>
+            <div class="text-xs font-medium">本社管理者</div>
         </div>
-        <nav class="flex-1 px-3 space-y-1 overflow-y-auto">
-            <div class="text-xs text-gray-500 px-3 pt-2 pb-1 tracking-wide">MAIN</div>
-            <a href="01030101_member_search.html" class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white"><span>会員管理</span></a>
-<a href="01040101_group_list.html" class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white"><span>グループ管理</span></a>
-<a href="01050101_tag_list.html" class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white"><span>タグ管理</span></a>
-<a href="01060101_step_list.html" class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white"><span>マガジン管理</span></a>
-<a href="01070101_new_message.html" class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white"><span>問合せ管理</span></a>
-<a href="01080401_product_list.html" class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white"><span>商品管理</span></a>
-            <div class="text-xs text-gray-500 px-3 pt-4 pb-1 tracking-wide">SITE</div>
-            <a href="01090101_voice_list.html" class="flex items-center justify-between px-3 py-2 rounded-lg text-sm bg-brand-600 text-white font-medium"><span>サイト管理</span></a>
-<a href="01100101_daily_sales.html" class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white"><span>売上管理</span></a>
-<a href="01110101_agency_list.html" class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white"><span>広告管理</span></a>
-            <div class="text-xs text-gray-500 px-3 pt-4 pb-1 tracking-wide">SYSTEM</div>
-            <a href="#" class="flex items-center px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">マスター管理</a>
+        <div class="px-4 mb-3">
+            <div class="flex items-center gap-2">
+                <input type="text" placeholder="ID・メールアドレス" class="w-full bg-side-800 border border-white/10 rounded-lg px-3 py-2 text-xs text-white placeholder-gray-500">
+                <button title="会員検索" aria-label="会員検索" class="shrink-0 bg-brand-600 hover:bg-brand-700 rounded-lg px-2.5 py-2 text-xs leading-none">&#128269;</button>
+            </div>
+        </div>
+        <nav class="flex-1 px-3 space-y-1 overflow-y-auto pb-4">
+            <details class="group"><summary class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white cursor-pointer list-none select-none"><span>会員管理</span><span class="text-[10px] text-gray-500 transition-transform group-open:rotate-90">&#9654;</span></summary><div class="mt-1 mb-1 ml-3 pl-3 border-l border-white/10 space-y-1"><a href="01030101_member_search.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">会員一覧</a><a href="01030201_point_log.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">会員行動ログ</a><a href="01030301_duplicate_list.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">重複会員一覧</a><a href="01110301_code_error_list.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">コードミス会員一覧</a></div></details>
+            <details class="group"><summary class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white cursor-pointer list-none select-none"><span>グループ管理</span><span class="text-[10px] text-gray-500 transition-transform group-open:rotate-90">&#9654;</span></summary><div class="mt-1 mb-1 ml-3 pl-3 border-l border-white/10 space-y-1"><a href="01040101_group_list.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">グループ一覧</a></div></details>
+            <details class="group"><summary class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white cursor-pointer list-none select-none"><span>タグ管理</span><span class="text-[10px] text-gray-500 transition-transform group-open:rotate-90">&#9654;</span></summary><div class="mt-1 mb-1 ml-3 pl-3 border-l border-white/10 space-y-1"><a href="01050101_tag_list.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">タグ一覧</a></div></details>
+            <details class="group"><summary class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white cursor-pointer list-none select-none"><span>マガジン管理</span><span class="text-[10px] text-gray-500 transition-transform group-open:rotate-90">&#9654;</span></summary><div class="mt-1 mb-1 ml-3 pl-3 border-l border-white/10 space-y-1"><a href="01060101_step_list.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">ステップメール</a><a href="01060201_template_list.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">マガジン編集・送信</a><a href="01060301_broadcast_history.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">マガジン送信履歴</a></div></details>
+            <details class="group"><summary class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white cursor-pointer list-none select-none"><span>お問い合わせ管理</span><span class="text-[10px] text-gray-500 transition-transform group-open:rotate-90">&#9654;</span></summary><div class="mt-1 mb-1 ml-3 pl-3 border-l border-white/10 space-y-1"><a href="01070101_new_message.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">新規メッセージ</a><a href="01070201_unreplied.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">受信メッセージ</a><a href="01070301_replied.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">返信済みメッセージ</a><a href="01070401_sent_index.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">送信済メッセージ</a></div></details>
+            <details class="group"><summary class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white cursor-pointer list-none select-none"><span>商品管理</span><span class="text-[10px] text-gray-500 transition-transform group-open:rotate-90">&#9654;</span></summary><div class="mt-1 mb-1 ml-3 pl-3 border-l border-white/10 space-y-1"><a href="01080101_product_calendar.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">商品カレンダー</a><a href="01080201_result_product_list.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">実績商品一覧</a><a href="01080301_image_uploader.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">画像アップローダー</a></div></details>
+            <a href="01080401_product_list.html" class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white"><span>商品一覧</span></a>
+            <details class="group" open><summary class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white cursor-pointer list-none select-none"><span>サイト管理</span><span class="text-[10px] text-gray-500 transition-transform group-open:rotate-90">&#9654;</span></summary><div class="mt-1 mb-1 ml-3 pl-3 border-l border-white/10 space-y-1"><a href="01090101_voice_list.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">会員様の声</a><a href="01090201_result_list.html" class="block px-3 py-1.5 rounded-lg text-sm bg-brand-600 text-white font-medium">投資実績</a><a href="01090301_line_config_index.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">LINEコンフィグ</a><a href="01090401_site_config_list.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">サイトコンフィグ</a></div></details>
+            <details class="group"><summary class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white cursor-pointer list-none select-none"><span>売り上げ管理</span><span class="text-[10px] text-gray-500 transition-transform group-open:rotate-90">&#9654;</span></summary><div class="mt-1 mb-1 ml-3 pl-3 border-l border-white/10 space-y-1"><a href="01100101_daily_sales.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">日別売り上げ</a><a href="01100201_monthly_sales.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">月別売り上げ</a><a href="01100301_monthly_recovery_rate.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">月別回収率</a></div></details>
+            <details class="group"><summary class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white cursor-pointer list-none select-none"><span>広告管理</span><span class="text-[10px] text-gray-500 transition-transform group-open:rotate-90">&#9654;</span></summary><div class="mt-1 mb-1 ml-3 pl-3 border-l border-white/10 space-y-1"><a href="01110101_agency_list.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">広告代理店管理</a><a href="01110201_ad_effect.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">広告効果</a></div></details>
+            <a href="#" class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white"><span>サイト</span></a>
+            <details class="group"><summary class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white cursor-pointer list-none select-none"><span>代理店管理画面</span><span class="text-[10px] text-gray-500 transition-transform group-open:rotate-90">&#9654;</span></summary><div class="mt-1 mb-1 ml-3 pl-3 border-l border-white/10"><div class="px-3 py-1.5 text-xs text-gray-600">（項目未定）</div></div></details>
+            <a href="#" class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white"><span>アクセス解析</span></a>
+            <details class="group"><summary class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white cursor-pointer list-none select-none"><span>マスター管理</span><span class="text-[10px] text-gray-500 transition-transform group-open:rotate-90">&#9654;</span></summary><div class="mt-1 mb-1 ml-3 pl-3 border-l border-white/10 space-y-1"><a href="01030104_code_search.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">コード特定</a><a href="02010101_master_member_search.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">会員検索</a><a href="02020101_master_ad_effect.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">通しコード別広告集計</a><a href="02020102_site_recovery_rate.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">サイト別回収率</a><a href="02020201_master_code_list.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">通しコード一覧</a><a href="02020301_master_agency_list.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">通し代理店一覧</a><a href="02030101_forbidden_domain.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">禁止ドメイン</a><a href="02030102_forbidden_address.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">禁止アドレス</a><a href="02030103_forbidden_ip.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">禁止IP</a><a href="02030104_allowed_domain.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">許可ドメイン</a><a href="02030105_forward_setting.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">転送設定</a><a href="02040101_operator_list.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">オペレーター一覧</a><a href="02040104_operator_activity_log.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">オペレーター行動ログ</a></div></details>
         </nav>
-        <div class="p-3 border-t border-white/10 flex items-center gap-2">
-            <div class="w-8 h-8 rounded-full bg-brand-500 flex items-center justify-center text-xs font-bold">AJ</div>
-            <div class="text-xs"><div class="font-medium">jukawaOP</div><div class="text-gray-500">オペレーター</div></div>
-        </div>
     </aside>
     
 <div class="flex-1 min-w-0">
@@ -48,23 +50,18 @@
     <header class="flex items-center justify-between px-4 lg:px-8 py-4 bg-white border-b border-gray-200">
         <div class="flex items-center gap-3 min-w-0">
             <button onclick="toggleSidebar()" aria-label="メニュー" class="lg:hidden shrink-0 text-gray-500 border border-gray-200 rounded-lg p-2 text-base leading-none">&#9776;</button>
-            <div class="min-w-0">
-                <div class="text-lg lg:text-xl font-bold text-gray-900 truncate">実績ページデータ更新ページ</div>
-            </div>
+            <a href="#" title="サイトトップページへ" class="shrink-0 text-lg font-bold text-brand-600 hover:text-brand-700 hover:underline">サイト AAA</a>
         </div>
-        <div class="flex items-center gap-3">
-            <div class="relative hidden lg:block">
-                <input type="text" placeholder="検索..." class="w-72 border border-gray-200 rounded-lg pl-9 pr-3 py-2 text-sm bg-gray-50">
-                <span class="absolute left-3 top-2.5 text-gray-400 text-sm">&#128269;</span>
-            </div>
-            <button class="relative border border-gray-200 rounded-lg p-2 text-gray-500">
-                &#128276;<span class="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] rounded-full w-4 h-4 flex items-center justify-center">3</span>
-            </button>
-            <div class="w-9 h-9 rounded-full bg-brand-600 text-white flex items-center justify-center text-sm font-bold">OP</div>
+        <div class="flex items-center gap-2 lg:gap-3">
+            <button title="メッセージお気に入り" aria-label="メッセージお気に入り" class="border border-gray-200 rounded-lg p-2 text-gray-500 hover:bg-gray-50 leading-none">&#9733;</button>
+            <button title="受信メッセージ" aria-label="受信メッセージ" class="border border-gray-200 rounded-lg p-2 text-gray-500 hover:bg-gray-50 leading-none">&#9993;</button>
+            <button title="入金メッセージ" aria-label="入金メッセージ" class="border border-gray-200 rounded-lg p-2 text-gray-500 hover:bg-gray-50 leading-none">&#128176;</button>
+            <button title="ログアウト" class="flex items-center gap-1 border border-gray-200 rounded-lg px-2 lg:px-3 py-2 text-gray-500 hover:bg-gray-50 text-sm leading-none shrink-0"><span>&#9211;</span><span class="hidden lg:inline">ログアウト</span></button>
         </div>
     </header>
     
-<main class="p-8 space-y-6"><div class="bg-white rounded-xl border border-gray-200 shadow-sm p-6 ">
+<main class="p-8 space-y-6">
+<div data-page-title class="text-xl font-bold text-gray-900">実績ページデータ更新ページ</div><div class="bg-white rounded-xl border border-gray-200 shadow-sm p-6 ">
         <div class="flex items-center justify-between mb-4 pb-3 border-b border-gray-100">
             <div class="font-semibold text-gray-800">実績編集パネル</div>
         </div>

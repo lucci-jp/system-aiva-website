@@ -32,9 +32,8 @@
 -->
 <div class="w-full max-w-lg">
 
-    <div class="flex items-center gap-2 justify-center mb-6">
-        <div class="w-9 h-9 rounded-lg bg-brand-600 flex items-center justify-center font-bold text-white">S</div>
-        <div class="text-white font-bold">SystemRocky ADMIN</div>
+    <div class="flex items-center justify-center mb-6">
+        <div class="text-white font-bold">SystemRocky</div>
     </div>
 
     <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
@@ -42,12 +41,16 @@
         <!-- ユーザー情報(画面項目仕様 通番7-8: ニックネーム/LINE名) -->
         <div class="bg-brand-600 text-white px-6 py-5">
             <div class="flex items-center gap-3">
-                <div class="w-11 h-11 rounded-full bg-white/20 flex items-center justify-center font-bold">AJ</div>
-                <div>
-                    <div class="text-[11px] opacity-80">ニックネーム</div>
-                    <div class="font-bold leading-none">jukawaOP</div>
-                    <div class="text-[11px] opacity-80 mt-2">LINE名</div>
-                    <div class="text-sm">yamada_taro</div>
+                <div class="w-11 h-11 rounded-full bg-white/20 flex items-center justify-center font-bold shrink-0">AJ</div>
+                <div class="flex-1 min-w-0 space-y-1.5">
+                    <div class="flex items-center gap-3">
+                        <div class="text-[11px] opacity-80 w-24 shrink-0">ニックネーム</div>
+                        <div class="font-bold truncate">jukawaOP</div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="text-[11px] opacity-80 w-24 shrink-0">LINE名</div>
+                        <div class="text-sm truncate">yamada_taro</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -63,7 +66,7 @@
                     <option value="2">サイトB（競艇）</option>
                     <option value="3">サイトC（競輪）</option>
                 </select>
-                <button type="submit" class="w-full bg-brand-600 hover:bg-brand-700 text-white text-sm font-medium py-2.5 rounded-lg">サイト選択</button>
+                <a href="01030101_member_search.html" class="block w-full text-center bg-brand-600 hover:bg-brand-700 text-white text-sm font-medium py-2.5 rounded-lg">サイト選択</a>
             </form>
 
             <!-- 担当サイトが無い場合の表示例(通常は非表示) -->

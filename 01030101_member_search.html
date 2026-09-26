@@ -22,48 +22,41 @@
 </script>
 
 
+<style>summary::-webkit-details-marker{display:none}summary::marker{content:""}</style>
 </head>
 <body class="bg-gray-50">
 <div class="flex min-h-screen">
     <div id="sidebarOverlay" onclick="toggleSidebar()" class="hidden fixed inset-0 bg-black/40 z-30 lg:hidden"></div>
 
     <aside id="sidebar" class="w-64 max-w-[80vw] bg-side-900 text-white flex flex-col shrink-0 min-h-screen fixed inset-y-0 left-0 z-40 -translate-x-full transition-transform duration-200 lg:translate-x-0 lg:static lg:z-auto">
-        <div class="flex items-center gap-2 px-5 py-5">
-            <div class="w-8 h-8 rounded-lg bg-brand-600 flex items-center justify-center font-bold">S</div>
-            <div>
-                <div class="font-bold leading-none">SystemRocky</div>
-                <div class="text-xs text-gray-500">ADMIN</div>
-            </div>
-        </div>
+
+        <div class="pt-5"></div>
         <div class="mx-4 mb-4 p-3 bg-side-800 rounded-lg flex items-center gap-2">
-            <div class="w-7 h-7 rounded bg-brand-500 flex items-center justify-center text-xs font-bold">本</div>
-            <div class="text-xs">
-                <div class="font-medium">本社管理者</div>
-                <div class="text-gray-500">Head Office</div>
+            <div class="w-7 h-7 rounded-full bg-brand-500 flex items-center justify-center text-xs font-bold">本</div>
+            <div class="text-xs font-medium">本社管理者</div>
+        </div>
+        <div class="px-4 mb-3">
+            <div class="flex items-center gap-2">
+                <input type="text" placeholder="ID・メールアドレス" class="w-full bg-side-800 border border-white/10 rounded-lg px-3 py-2 text-xs text-white placeholder-gray-500">
+                <button title="会員検索" aria-label="会員検索" class="shrink-0 bg-brand-600 hover:bg-brand-700 rounded-lg px-2.5 py-2 text-xs leading-none">&#128269;</button>
             </div>
         </div>
-        <nav class="flex-1 px-3 space-y-1 overflow-y-auto">
-            <div class="text-xs text-gray-500 px-3 pt-2 pb-1 tracking-wide">MAIN</div>
-            <a href="01030101_member_search.html" class="flex items-center justify-between px-3 py-2 rounded-lg text-sm bg-brand-600 text-white font-medium"><span>会員管理</span></a>
-<a href="01040101_group_list.html" class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white"><span>グループ管理</span></a>
-<a href="01050101_tag_list.html" class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white"><span>タグ管理</span></a>
-<a href="01060101_step_list.html" class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white"><span>マガジン管理</span></a>
-<a href="01070101_new_message.html" class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white"><span>問合せ管理</span></a>
-<a href="01080401_product_list.html" class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white"><span>商品管理</span></a>
-            <div class="text-xs text-gray-500 px-3 pt-4 pb-1 tracking-wide">SITE</div>
-            <a href="01090101_voice_list.html" class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white"><span>サイト管理</span></a>
-<a href="01100101_daily_sales.html" class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white"><span>売上管理</span></a>
-<a href="01110101_agency_list.html" class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white"><span>広告管理</span></a>
-            <div class="text-xs text-gray-500 px-3 pt-4 pb-1 tracking-wide">SYSTEM</div>
-            <a href="#" class="flex items-center px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">マスター管理</a>
+        <nav class="flex-1 px-3 space-y-1 overflow-y-auto pb-4">
+            <details class="group" open><summary class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white cursor-pointer list-none select-none"><span>会員管理</span><span class="text-[10px] text-gray-500 transition-transform group-open:rotate-90">&#9654;</span></summary><div class="mt-1 mb-1 ml-3 pl-3 border-l border-white/10 space-y-1"><a href="01030101_member_search.html" class="block px-3 py-1.5 rounded-lg text-sm bg-brand-600 text-white font-medium">会員一覧</a><a href="01030201_point_log.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">会員行動ログ</a><a href="01030301_duplicate_list.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">重複会員一覧</a><a href="01110301_code_error_list.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">コードミス会員一覧</a></div></details>
+            <details class="group"><summary class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white cursor-pointer list-none select-none"><span>グループ管理</span><span class="text-[10px] text-gray-500 transition-transform group-open:rotate-90">&#9654;</span></summary><div class="mt-1 mb-1 ml-3 pl-3 border-l border-white/10 space-y-1"><a href="01040101_group_list.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">グループ一覧</a></div></details>
+            <details class="group"><summary class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white cursor-pointer list-none select-none"><span>タグ管理</span><span class="text-[10px] text-gray-500 transition-transform group-open:rotate-90">&#9654;</span></summary><div class="mt-1 mb-1 ml-3 pl-3 border-l border-white/10 space-y-1"><a href="01050101_tag_list.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">タグ一覧</a></div></details>
+            <details class="group"><summary class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white cursor-pointer list-none select-none"><span>マガジン管理</span><span class="text-[10px] text-gray-500 transition-transform group-open:rotate-90">&#9654;</span></summary><div class="mt-1 mb-1 ml-3 pl-3 border-l border-white/10 space-y-1"><a href="01060101_step_list.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">ステップメール</a><a href="01060201_template_list.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">マガジン編集・送信</a><a href="01060301_broadcast_history.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">マガジン送信履歴</a></div></details>
+            <details class="group"><summary class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white cursor-pointer list-none select-none"><span>お問い合わせ管理</span><span class="text-[10px] text-gray-500 transition-transform group-open:rotate-90">&#9654;</span></summary><div class="mt-1 mb-1 ml-3 pl-3 border-l border-white/10 space-y-1"><a href="01070101_new_message.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">新規メッセージ</a><a href="01070201_unreplied.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">受信メッセージ</a><a href="01070301_replied.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">返信済みメッセージ</a><a href="01070401_sent_index.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">送信済メッセージ</a></div></details>
+            <details class="group"><summary class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white cursor-pointer list-none select-none"><span>商品管理</span><span class="text-[10px] text-gray-500 transition-transform group-open:rotate-90">&#9654;</span></summary><div class="mt-1 mb-1 ml-3 pl-3 border-l border-white/10 space-y-1"><a href="01080101_product_calendar.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">商品カレンダー</a><a href="01080201_result_product_list.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">実績商品一覧</a><a href="01080301_image_uploader.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">画像アップローダー</a></div></details>
+            <a href="01080401_product_list.html" class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white"><span>商品一覧</span></a>
+            <details class="group"><summary class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white cursor-pointer list-none select-none"><span>サイト管理</span><span class="text-[10px] text-gray-500 transition-transform group-open:rotate-90">&#9654;</span></summary><div class="mt-1 mb-1 ml-3 pl-3 border-l border-white/10 space-y-1"><a href="01090101_voice_list.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">会員様の声</a><a href="01090201_result_list.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">投資実績</a><a href="01090301_line_config_index.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">LINEコンフィグ</a><a href="01090401_site_config_list.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">サイトコンフィグ</a></div></details>
+            <details class="group"><summary class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white cursor-pointer list-none select-none"><span>売り上げ管理</span><span class="text-[10px] text-gray-500 transition-transform group-open:rotate-90">&#9654;</span></summary><div class="mt-1 mb-1 ml-3 pl-3 border-l border-white/10 space-y-1"><a href="01100101_daily_sales.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">日別売り上げ</a><a href="01100201_monthly_sales.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">月別売り上げ</a><a href="01100301_monthly_recovery_rate.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">月別回収率</a></div></details>
+            <details class="group"><summary class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white cursor-pointer list-none select-none"><span>広告管理</span><span class="text-[10px] text-gray-500 transition-transform group-open:rotate-90">&#9654;</span></summary><div class="mt-1 mb-1 ml-3 pl-3 border-l border-white/10 space-y-1"><a href="01110101_agency_list.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">広告代理店管理</a><a href="01110201_ad_effect.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">広告効果</a></div></details>
+            <a href="#" class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white"><span>サイト</span></a>
+            <details class="group"><summary class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white cursor-pointer list-none select-none"><span>代理店管理画面</span><span class="text-[10px] text-gray-500 transition-transform group-open:rotate-90">&#9654;</span></summary><div class="mt-1 mb-1 ml-3 pl-3 border-l border-white/10"><div class="px-3 py-1.5 text-xs text-gray-600">（項目未定）</div></div></details>
+            <a href="#" class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white"><span>アクセス解析</span></a>
+            <details class="group"><summary class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white cursor-pointer list-none select-none"><span>マスター管理</span><span class="text-[10px] text-gray-500 transition-transform group-open:rotate-90">&#9654;</span></summary><div class="mt-1 mb-1 ml-3 pl-3 border-l border-white/10 space-y-1"><a href="01030104_code_search.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">コード特定</a><a href="02010101_master_member_search.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">会員検索</a><a href="02020101_master_ad_effect.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">通しコード別広告集計</a><a href="02020102_site_recovery_rate.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">サイト別回収率</a><a href="02020201_master_code_list.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">通しコード一覧</a><a href="02020301_master_agency_list.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">通し代理店一覧</a><a href="02030101_forbidden_domain.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">禁止ドメイン</a><a href="02030102_forbidden_address.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">禁止アドレス</a><a href="02030103_forbidden_ip.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">禁止IP</a><a href="02030104_allowed_domain.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">許可ドメイン</a><a href="02030105_forward_setting.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">転送設定</a><a href="02040101_operator_list.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">オペレーター一覧</a><a href="02040104_operator_activity_log.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">オペレーター行動ログ</a></div></details>
         </nav>
-        <div class="p-3 border-t border-white/10 flex items-center gap-2">
-            <div class="w-8 h-8 rounded-full bg-brand-500 flex items-center justify-center text-xs font-bold">AJ</div>
-            <div class="text-xs">
-                <div class="font-medium">jukawaOP</div>
-                <div class="text-gray-500">オペレーター</div>
-            </div>
-        </div>
     </aside>
     
 <div class="flex-1 min-w-0">
@@ -71,24 +64,18 @@
     <header class="flex items-center justify-between px-4 lg:px-8 py-4 bg-white border-b border-gray-200">
         <div class="flex items-center gap-3 min-w-0">
             <button onclick="toggleSidebar()" aria-label="メニュー" class="lg:hidden shrink-0 text-gray-500 border border-gray-200 rounded-lg p-2 text-base leading-none">&#9776;</button>
-            <div class="min-w-0">
-                <div class="text-lg lg:text-xl font-bold text-gray-900 truncate">会員検索</div>
-            </div>
+            <a href="#" title="サイトトップページへ" class="shrink-0 text-lg font-bold text-brand-600 hover:text-brand-700 hover:underline">サイト AAA</a>
         </div>
-        <div class="flex items-center gap-3">
-            <div class="relative hidden lg:block">
-                <input type="text" placeholder="会員・注文を検索..." class="w-72 border border-gray-200 rounded-lg pl-9 pr-3 py-2 text-sm bg-gray-50">
-                <span class="absolute left-3 top-2.5 text-gray-400 text-sm">&#128269;</span>
-            </div>
-            <button class="relative border border-gray-200 rounded-lg p-2 text-gray-500">
-                &#128276;
-                <span class="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] rounded-full w-4 h-4 flex items-center justify-center">3</span>
-            </button>
-            <div class="w-9 h-9 rounded-full bg-brand-600 text-white flex items-center justify-center text-sm font-bold">OP</div>
+        <div class="flex items-center gap-2 lg:gap-3">
+            <button title="メッセージお気に入り" aria-label="メッセージお気に入り" class="border border-gray-200 rounded-lg p-2 text-gray-500 hover:bg-gray-50 leading-none">&#9733;</button>
+            <button title="受信メッセージ" aria-label="受信メッセージ" class="border border-gray-200 rounded-lg p-2 text-gray-500 hover:bg-gray-50 leading-none">&#9993;</button>
+            <button title="入金メッセージ" aria-label="入金メッセージ" class="border border-gray-200 rounded-lg p-2 text-gray-500 hover:bg-gray-50 leading-none">&#128176;</button>
+            <button title="ログアウト" class="flex items-center gap-1 border border-gray-200 rounded-lg px-2 lg:px-3 py-2 text-gray-500 hover:bg-gray-50 text-sm leading-none shrink-0"><span>&#9211;</span><span class="hidden lg:inline">ログアウト</span></button>
         </div>
     </header>
     
 <main class="p-8 space-y-6">
+<div data-page-title class="text-xl font-bold text-gray-900">会員検索ページ</div>
 <div class="bg-white rounded-xl border border-gray-200 shadow-sm p-6 ">
         <div class="font-semibold text-gray-800 mb-4 pb-3 border-b border-gray-100">会員検索パネル</div>
         
@@ -100,13 +87,13 @@
         </select>
     </div>
     <div>
-        <label class="block text-xs font-medium text-gray-600 mb-1">会員タイプ</label>
+        <label class="block text-xs font-medium text-gray-600 mb-1">アドレス有無</label>
         <select class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white">
             <option>-- 選択 --</option>
         </select>
     </div>
     <div>
-        <label class="block text-xs font-medium text-gray-600 mb-1">会員No</label>
+        <label class="block text-xs font-medium text-gray-600 mb-1">ID検索</label>
         <div class="flex items-center gap-2">
             <input type="text" placeholder="最小" class="w-20 border border-gray-200 rounded-lg px-2 py-2 text-sm">
             <span class="text-gray-400">〜</span>
@@ -120,11 +107,11 @@
         <input type="text" placeholder="" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white">
     </div>
     <div>
-        <label class="block text-xs font-medium text-gray-600 mb-1">LINE名</label>
+        <label class="block text-xs font-medium text-gray-600 mb-1">LINEアカウント名</label>
         <input type="text" placeholder="" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white">
     </div>
     <div>
-        <label class="block text-xs font-medium text-gray-600 mb-1">Email&備考検索</label>
+        <label class="block text-xs font-medium text-gray-600 mb-1">メールアドレス</label>
         <input type="text" placeholder="" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white">
     </div>
 </div>
@@ -162,7 +149,7 @@
         </div>
     </div>
     <div>
-        <label class="block text-xs font-medium text-gray-600 mb-1">参加回数</label>
+        <label class="block text-xs font-medium text-gray-600 mb-1">有料商品購入回数</label>
         <div class="flex items-center gap-2">
             <input type="text" placeholder="最小" class="w-20 border border-gray-200 rounded-lg px-2 py-2 text-sm">
             <span class="text-gray-400">〜</span>
@@ -172,7 +159,7 @@
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-3">
     <div>
-        <label class="block text-xs font-medium text-gray-600 mb-1">入会日</label>
+        <label class="block text-xs font-medium text-gray-600 mb-1">登録日</label>
         <div class="flex items-center gap-2">
             <input type="text" placeholder="最小" class="w-20 border border-gray-200 rounded-lg px-2 py-2 text-sm">
             <span class="text-gray-400">〜</span>
@@ -180,7 +167,7 @@
         </div>
     </div>
     <div>
-        <label class="block text-xs font-medium text-gray-600 mb-1">最終ログイン</label>
+        <label class="block text-xs font-medium text-gray-600 mb-1">最終ログイン日</label>
         <div class="flex items-center gap-2">
             <input type="text" placeholder="最小" class="w-20 border border-gray-200 rounded-lg px-2 py-2 text-sm">
             <span class="text-gray-400">〜</span>
@@ -190,7 +177,7 @@
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-3">
     <div>
-        <label class="block text-xs font-medium text-gray-600 mb-1">初回購入日</label>
+        <label class="block text-xs font-medium text-gray-600 mb-1">初課金日</label>
         <div class="flex items-center gap-2">
             <input type="text" placeholder="最小" class="w-20 border border-gray-200 rounded-lg px-2 py-2 text-sm">
             <span class="text-gray-400">〜</span>
@@ -198,7 +185,7 @@
         </div>
     </div>
     <div>
-        <label class="block text-xs font-medium text-gray-600 mb-1">最新購入日</label>
+        <label class="block text-xs font-medium text-gray-600 mb-1">最新課金日</label>
         <div class="flex items-center gap-2">
             <input type="text" placeholder="最小" class="w-20 border border-gray-200 rounded-lg px-2 py-2 text-sm">
             <span class="text-gray-400">〜</span>
@@ -208,7 +195,7 @@
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-3">
     <div>
-        <label class="block text-xs font-medium text-gray-600 mb-1">最新購入金額</label>
+        <label class="block text-xs font-medium text-gray-600 mb-1">最新課金額</label>
         <div class="flex items-center gap-2">
             <input type="text" placeholder="最小" class="w-20 border border-gray-200 rounded-lg px-2 py-2 text-sm">
             <span class="text-gray-400">〜</span>
@@ -234,7 +221,7 @@
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-3">
     <div>
-        <label class="block text-xs font-medium text-gray-600 mb-1">購入金額</label>
+        <label class="block text-xs font-medium text-gray-600 mb-1">課金額</label>
         <div class="flex items-center gap-2">
             <input type="text" placeholder="最小" class="w-20 border border-gray-200 rounded-lg px-2 py-2 text-sm">
             <span class="text-gray-400">〜</span>
@@ -242,7 +229,7 @@
         </div>
     </div>
     <div>
-        <label class="block text-xs font-medium text-gray-600 mb-1">購入回数</label>
+        <label class="block text-xs font-medium text-gray-600 mb-1">課金回数</label>
         <div class="flex items-center gap-2">
             <input type="text" placeholder="最小" class="w-20 border border-gray-200 rounded-lg px-2 py-2 text-sm">
             <span class="text-gray-400">〜</span>
@@ -258,30 +245,107 @@
         </div>
     </div>
 </div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-3">
+    <div>
+        <label class="block text-xs font-medium text-gray-600 mb-1">LINE状態</label>
+        <select class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white">
+            <option>-- 選択 --</option>
+            <option>LINE登録なし</option>
+            <option>LINE未ブロック</option>
+            <option>LINEブロック</option>
+        </select>
+    </div>
+</div>
 <div class="mb-4">
-    <label class="block text-xs font-medium text-gray-600 mb-1">対象LINE</label>
+    <label class="block text-xs font-medium text-gray-600 mb-1">対象ライン</label>
     <div class="flex flex-wrap gap-3 text-xs text-gray-600">
         <label class="flex items-center gap-1"><input type="checkbox"> LINE 5</label><label class="flex items-center gap-1"><input type="checkbox"> LINE 4</label><label class="flex items-center gap-1"><input type="checkbox"> LINE 3</label><label class="flex items-center gap-1"><input type="checkbox"> LINE 2</label><label class="flex items-center gap-1"><input type="checkbox"> LINE 1</label><label class="flex items-center gap-1"><input type="checkbox"> その他</label><label class="flex items-center gap-1"><input type="checkbox"> 空白</label>
     </div>
 </div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-3">
+    <div>
+        <label class="block text-xs font-medium text-gray-600 mb-1">参加商品OR</label>
+        <input type="text" placeholder="" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white">
+    </div>
+    <div>
+        <label class="block text-xs font-medium text-gray-600 mb-1">NOT参加商品OR</label>
+        <input type="text" placeholder="" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white">
+    </div>
+    <div>
+        <label class="block text-xs font-medium text-gray-600 mb-1">備考AND</label>
+        <input type="text" placeholder="" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white">
+    </div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-3">
+    <div>
+        <label class="block text-xs font-medium text-gray-600 mb-1">NOT備考AND</label>
+        <input type="text" placeholder="" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white">
+    </div>
+    <div>
+        <label class="block text-xs font-medium text-gray-600 mb-1">NOT備考OR</label>
+        <input type="text" placeholder="" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white">
+    </div>
+</div>
+<div class="mb-4">
+    <label class="block text-xs font-medium text-gray-600 mb-1">会員NO</label>
+    <textarea rows="3" placeholder="" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white"></textarea>
+</div>
 <button class="bg-brand-600 hover:bg-brand-700 text-white text-sm font-medium px-5 py-2.5 rounded-lg">検索実行</button>
+
+    </div><div class="bg-white rounded-xl border border-gray-200 shadow-sm p-6 mt-6">
+        <div class="font-semibold text-gray-800 mb-4 pb-3 border-b border-gray-100">一括処理</div>
+
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4">
+    <div>
+        <label class="block text-xs font-medium text-gray-600 mb-1">一括パス</label>
+        <input type="password" placeholder="" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white">
+    </div>
+</div>
+<div class="border-t border-gray-100 pt-4 mb-4">
+    <label class="block text-xs font-medium text-gray-600 mb-1">備考</label>
+    <div class="flex flex-col sm:flex-row sm:items-center gap-2">
+        <input type="text" placeholder="" class="w-full sm:max-w-sm border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white">
+        <button class="bg-brand-600 hover:bg-brand-700 text-white text-sm font-medium px-4 py-2 rounded-lg shrink-0">この条件で備考一括追加</button>
+        <button class="border border-gray-200 text-gray-600 hover:bg-gray-50 text-sm font-medium px-4 py-2 rounded-lg shrink-0">この条件で備考一括削除</button>
+    </div>
+</div>
+<div class="border-t border-gray-100 pt-4 mb-4">
+    <label class="block text-xs font-medium text-gray-600 mb-1">ポイント</label>
+    <div class="flex flex-col sm:flex-row sm:items-center gap-2">
+        <input type="text" placeholder="" class="w-full sm:w-40 border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white">
+        <button class="bg-brand-600 hover:bg-brand-700 text-white text-sm font-medium px-4 py-2 rounded-lg shrink-0">この条件でポイント一括追加</button>
+        <button class="border border-gray-200 text-gray-600 hover:bg-gray-50 text-sm font-medium px-4 py-2 rounded-lg shrink-0">この条件でポイント一括削除</button>
+    </div>
+</div>
+<div class="border-t border-gray-100 pt-4">
+    <label class="block text-xs font-medium text-gray-600 mb-1">登録状態</label>
+    <div class="flex flex-col sm:flex-row sm:items-center gap-2">
+        <select class="w-full sm:w-52 border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white">
+            <option>-- 選択 --</option>
+        </select>
+        <button class="bg-brand-600 hover:bg-brand-700 text-white text-sm font-medium px-4 py-2 rounded-lg shrink-0">この条件で登録状態変更。</button>
+    </div>
+</div>
 
     </div><div class="bg-white rounded-xl border border-gray-200 shadow-sm p-6 mt-6">
         <div class="font-semibold text-gray-800 mb-4 pb-3 border-b border-gray-100">会員一覧</div>
         
-<div class="flex items-center justify-between mb-4">
-    <div class="font-semibold text-gray-800">検索結果</div>
-    <input type="text" placeholder="Search" class="border border-gray-200 rounded-lg px-3 py-1.5 text-sm w-52">
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
+    <div class="font-semibold text-gray-800">検索結果(&#12288;件)</div>
+    <div class="flex items-center gap-2">
+        <label class="text-xs font-medium text-gray-600 shrink-0">seach</label>
+        <input type="text" placeholder="" class="border border-gray-200 rounded-lg px-3 py-1.5 text-sm w-52">
+    </div>
 </div>
 <div class="overflow-x-auto"><table class="w-full text-sm">
     <thead>
         <tr class="text-left text-xs text-gray-500 border-b border-gray-100">
-            <th class="py-2">ID</th><th>広告コード</th><th>ログイン回数</th><th>会員状態</th>
-            <th>LINE名</th><th>メール</th><th>入会日</th><th class="text-right">編集</th>
+            <th class="py-2"><a href="#" class="inline-flex items-center gap-1 hover:text-gray-700">ID <span class="text-gray-800">&#9660;</span></a></th><th><a href="#" class="inline-flex items-center gap-1 hover:text-gray-700">広告コード <span class="text-gray-300">&#8645;</span></a></th><th><a href="#" class="inline-flex items-center gap-1 hover:text-gray-700">ログイン回数 <span class="text-gray-300">&#8645;</span></a></th><th><a href="#" class="inline-flex items-center gap-1 hover:text-gray-700">会員状態 <span class="text-gray-300">&#8645;</span></a></th>
+            <th><a href="#" class="inline-flex items-center gap-1 hover:text-gray-700">LINE名 <span class="text-gray-300">&#8645;</span></a></th><th><a href="#" class="inline-flex items-center gap-1 hover:text-gray-700">メール <span class="text-gray-300">&#8645;</span></a></th><th><a href="#" class="inline-flex items-center gap-1 hover:text-gray-700">LINEメール <span class="text-gray-300">&#8645;</span></a></th><th><a href="#" class="inline-flex items-center gap-1 hover:text-gray-700">入会日 <span class="text-gray-300">&#8645;</span></a></th><th class="text-right">編集</th>
         </tr>
     </thead>
     <tbody>
-        <tr><td colspan="8" class="text-center text-gray-400 py-8">検索実行後に一覧表示されます</td></tr>
+        <tr><td colspan="9" class="text-center text-gray-400 py-8">検索実行後に一覧表示されます</td></tr>
     </tbody>
 </table></div>
 
