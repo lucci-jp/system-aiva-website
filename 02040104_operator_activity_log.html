@@ -44,7 +44,7 @@
             <a href="#" title="マスタ管理トップへ" class="shrink-0 text-lg font-bold text-brand-600 hover:text-brand-700 hover:underline">マスタ管理</a>
         </div>
         <div class="flex items-center gap-2 lg:gap-3">
-            <button title="ログアウト" class="flex items-center gap-1 border border-gray-200 rounded-lg px-2 lg:px-3 py-2 text-gray-500 hover:bg-gray-50 text-sm leading-none shrink-0"><span>&#9211;</span><span class="hidden lg:inline">ログアウト</span></button>
+            <a href="01010101_login.html" title="ログアウト" class="flex items-center gap-1 border border-gray-200 rounded-lg px-2 lg:px-3 py-2 text-gray-500 hover:bg-gray-50 text-sm leading-none shrink-0"><span>&#9211;</span><span class="hidden lg:inline">ログアウト</span></a>
         </div>
     </header>
     
@@ -53,13 +53,13 @@
         <div class="flex items-center justify-between mb-4 pb-3 border-b border-gray-100">
             <div class="font-semibold text-gray-800">オペレーター行動ログ</div>
         </div>
-<div class="flex justify-end mb-3"><input type="text" placeholder="Search" class="border border-gray-200 rounded-lg px-3 py-1.5 text-sm w-52"></div>
-<div class="overflow-x-auto"><table class="w-full text-sm">
-<thead><tr class="text-left text-xs text-gray-500 border-b border-gray-100"><th class="py-2">NO</th><th>実行日時</th><th>サイト名</th><th>会員ID</th><th>オペレーター</th><th>IP</th><th>行動内容</th></tr></thead>
-<tbody><tr><td colspan="7" class="text-center text-gray-400 py-4"></td></tr><tr><td colspan="7" class="text-center text-gray-400 py-4"></td></tr><tr><td colspan="7" class="text-center text-gray-400 py-4"></td></tr></tbody></table></div>
+<div class="flex justify-end items-center gap-2 mb-3"><label class="text-xs font-medium text-gray-600 shrink-0">Search</label><input type="text" class="border border-gray-200 rounded-lg px-3 py-1.5 text-sm w-52"></div>
+<div class="overflow-x-auto"><table class="w-full text-sm"><colgroup><col class="w-px"><col class="w-px"><col><col class="w-px"><col class="w-px"><col class="w-px"><col></colgroup>
+<thead><tr class="text-center text-xs text-gray-500 border-b border-gray-100"><th class="py-2 whitespace-nowrap px-3">NO</th><th class="whitespace-nowrap px-3">実行日</th><th class="px-3">サイト名</th><th class="whitespace-nowrap px-3">会員ID</th><th class="whitespace-nowrap px-3">オペレーター</th><th class="whitespace-nowrap px-3">IP</th><th class="px-3">行動内容</th></tr></thead>
+<tbody><tr class="border-b border-gray-50"><td class="py-2.5 px-3">検索結果を表示</td><td class="text-center whitespace-nowrap px-3">検索結果を表示</td><td class="text-center whitespace-nowrap px-3">検索結果を表示</td><td class="text-center whitespace-nowrap px-3"><a href="01030102_member_detail.html" class="text-brand-600">検索結果を表示</a></td><td class="text-center whitespace-nowrap px-3">検索結果を表示</td><td class="text-center whitespace-nowrap px-3">検索結果を表示</td><td class="px-3">検索結果を表示</td></tr><tr class="border-b border-gray-50"><td class="py-2.5 px-3">検索結果を表示</td><td class="text-center whitespace-nowrap px-3">検索結果を表示</td><td class="text-center whitespace-nowrap px-3">検索結果を表示</td><td class="text-center whitespace-nowrap px-3"><a href="01030102_member_detail.html" class="text-brand-600">検索結果を表示</a></td><td class="text-center whitespace-nowrap px-3">検索結果を表示</td><td class="text-center whitespace-nowrap px-3">検索結果を表示</td><td class="px-3">検索結果を表示</td></tr><tr class="border-b border-gray-50"><td class="py-2.5 px-3">検索結果を表示</td><td class="text-center whitespace-nowrap px-3">検索結果を表示</td><td class="text-center whitespace-nowrap px-3">検索結果を表示</td><td class="text-center whitespace-nowrap px-3"><a href="01030102_member_detail.html" class="text-brand-600">検索結果を表示</a></td><td class="text-center whitespace-nowrap px-3">検索結果を表示</td><td class="text-center whitespace-nowrap px-3">検索結果を表示</td><td class="px-3">検索結果を表示</td></tr></tbody></table></div>
 <div class="flex justify-center gap-2 mt-4 text-sm">
-    <span class="px-3 py-1 border border-gray-200 rounded">1</span><span class="px-3 py-1 border border-gray-200 rounded">2</span>
-    <span class="px-3 py-1 border border-gray-200 rounded">3</span><span class="px-3 py-1 border border-gray-200 rounded">4</span>
+    <button type="button" class="px-3 py-1 border border-gray-200 rounded hover:bg-gray-50">1</button><button type="button" class="px-3 py-1 border border-gray-200 rounded hover:bg-gray-50">2</button>
+    <button type="button" class="px-3 py-1 border border-gray-200 rounded hover:bg-gray-50">3</button><button type="button" class="px-3 py-1 border border-gray-200 rounded hover:bg-gray-50">4</button>
 </div>
 </div></main>
 </div></div><script>

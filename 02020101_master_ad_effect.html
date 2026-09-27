@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja"><head><meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1"><title>広告効果(全社) - SystemRocky</title>
+<meta name="viewport" content="width=device-width, initial-scale=1"><title>通し広告効果 - SystemRocky</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
   tailwind.config = { theme: { extend: { colors: {
@@ -44,26 +44,36 @@
             <a href="#" title="マスタ管理トップへ" class="shrink-0 text-lg font-bold text-brand-600 hover:text-brand-700 hover:underline">マスタ管理</a>
         </div>
         <div class="flex items-center gap-2 lg:gap-3">
-            <button title="ログアウト" class="flex items-center gap-1 border border-gray-200 rounded-lg px-2 lg:px-3 py-2 text-gray-500 hover:bg-gray-50 text-sm leading-none shrink-0"><span>&#9211;</span><span class="hidden lg:inline">ログアウト</span></button>
+            <a href="01010101_login.html" title="ログアウト" class="flex items-center gap-1 border border-gray-200 rounded-lg px-2 lg:px-3 py-2 text-gray-500 hover:bg-gray-50 text-sm leading-none shrink-0"><span>&#9211;</span><span class="hidden lg:inline">ログアウト</span></a>
         </div>
     </header>
     
 <main class="p-8 space-y-6">
-<div data-page-title class="text-xl font-bold text-gray-900">広告効果(全社)</div><div class="bg-white rounded-xl border border-gray-200 shadow-sm p-6 ">
+<div data-page-title class="text-xl font-bold text-gray-900">通し広告効果</div><div class="bg-white rounded-xl border border-gray-200 shadow-sm p-6 ">
         <div class="flex items-center justify-between mb-4 pb-3 border-b border-gray-100">
             <div class="font-semibold text-gray-800">検索パネル</div>
         </div>
 <div class="grid grid-cols-1 gap-4 mb-3">
-    <div><label class="block text-xs font-medium text-gray-600 mb-1">代理店(複数)</label>
+    <div><label class="block text-xs font-medium text-gray-600 mb-1">代理店</label>
         <input type="text" value="" placeholder="、区切り"  class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white"></div>
-    <div><label class="block text-xs font-medium text-gray-600 mb-1">コード(複数)</label>
+    <div><label class="block text-xs font-medium text-gray-600 mb-1">コード</label>
         <input type="text" value="" placeholder="、区切り"  class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white"></div>
 </div>
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
-    <div><label class="block text-xs font-medium text-gray-600 mb-1">対象日(から)</label>
-        <input type="text" value="" placeholder=""  class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white"></div>
-    <div><label class="block text-xs font-medium text-gray-600 mb-1">対象日(まで)</label>
-        <input type="text" value="" placeholder=""  class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white"></div>
+<div class="mb-3">
+    <label class="block text-xs font-medium text-gray-600 mb-1">対象日</label>
+    <div class="flex items-center gap-2">
+        <input type="text" value="" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white">
+        <span class="text-gray-400">〜</span>
+        <input type="text" value="" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white">
+    </div>
+</div>
+<div class="mb-2">
+    <div class="flex items-center gap-2 mb-1"><span class="text-xs font-medium text-gray-600">競艇</span><button type="button" class="border border-gray-200 text-gray-600 hover:bg-gray-50 text-[11px] px-2 py-1 rounded-lg">全選択</button></div>
+    <div class="flex flex-wrap gap-3 text-xs text-gray-600"><label class="flex items-center gap-1"><input type="checkbox" checked> サイト1</label><label class="flex items-center gap-1"><input type="checkbox" checked> サイト2</label><label class="flex items-center gap-1"><input type="checkbox" checked> サイト3</label><label class="flex items-center gap-1"><input type="checkbox" checked> サイト4</label><label class="flex items-center gap-1"><input type="checkbox" checked> サイト5</label><label class="flex items-center gap-1"><input type="checkbox" checked> サイト6</label></div>
+</div>
+<div class="mb-2">
+    <div class="flex items-center gap-2 mb-1"><span class="text-xs font-medium text-gray-600">競輪</span><button type="button" class="border border-gray-200 text-gray-600 hover:bg-gray-50 text-[11px] px-2 py-1 rounded-lg">全選択</button></div>
+    <div class="flex flex-wrap gap-3 text-xs text-gray-600"><label class="flex items-center gap-1"><input type="checkbox" checked> サイト1</label><label class="flex items-center gap-1"><input type="checkbox" checked> サイト2</label><label class="flex items-center gap-1"><input type="checkbox" checked> サイト3</label><label class="flex items-center gap-1"><input type="checkbox" checked> サイト4</label><label class="flex items-center gap-1"><input type="checkbox" checked> サイト5</label><label class="flex items-center gap-1"><input type="checkbox" checked> サイト6</label></div>
 </div>
 <button class="bg-brand-600 hover:bg-brand-700 text-white text-sm font-medium px-5 py-2.5 rounded-lg">検索実行</button>
 </div><div class="bg-white rounded-xl border border-gray-200 shadow-sm p-6 mt-6">
@@ -72,14 +82,13 @@
         </div><div class="flex flex-wrap gap-4 text-sm">
     <span>合算値</span><span>CL:1926</span><span>CV:1</span><span>CVR:0.05%</span>
     <span>初課金者:0</span><span>課金額:0</span><span>広告費:0</span><span>回収率:0%</span>
+<div class="mt-2"><a href="#" class="text-xs text-brand-600 hover:underline">初課金者を表示</a></div>
 </div></div><div class="bg-white rounded-xl border border-gray-200 shadow-sm p-6 mt-6">
         <div class="flex items-center justify-between mb-4 pb-3 border-b border-gray-100">
             <div class="font-semibold text-gray-800">一覧管理パネル</div>
-        </div><div class="overflow-x-auto"><table class="w-full text-sm">
-<thead><tr class="text-left text-xs text-gray-500 border-b border-gray-100">
-<th class="py-2">No</th><th>代</th><th>媒体名</th><th>価格</th><th>CL</th><th>CV</th><th>CVR</th><th>初課金者</th><th>課金額</th><th>広告費</th><th>回収率</th><th class="text-right">編集</th>
-</tr></thead>
-<tbody><tr class="border-b border-gray-50"><td class="py-2.5">0</td><td>-</td><td class="text-brand-600">コード無し</td><td></td><td>1926</td><td>1</td><td>0.05%</td><td>-</td><td>0</td><td>0</td><td class="text-gray-400">0%</td><td class="text-right"><a href="#" class="text-brand-600">編集</a></td></tr></tbody>
+        </div><div class="overflow-x-auto"><table class="w-full text-sm"><colgroup><col class="w-px"><col class="w-px"><col><col class="w-px"><col class="w-px"><col class="w-px"><col class="w-px"><col class="w-px"><col class="w-px"><col class="w-px"><col class="w-px"><col class="w-px"></colgroup>
+<thead><tr class="text-center text-xs text-gray-500 border-b border-gray-100"><th class="py-2 whitespace-nowrap px-3"><a href="#" class="hover:text-gray-700">通しコード<span class="text-gray-500 ml-0.5">&#9660;</span></a></th><th class="whitespace-nowrap px-3"><a href="#" class="hover:text-gray-700">代理店番号<span class="text-gray-300 ml-0.5">&#9650;&#9660;</span></a></th><th class="whitespace-nowrap px-3"><a href="#" class="hover:text-gray-700">媒体名<span class="text-gray-300 ml-0.5">&#9650;&#9660;</span></a></th><th class="whitespace-nowrap px-3"><a href="#" class="hover:text-gray-700">価格<span class="text-gray-300 ml-0.5">&#9650;&#9660;</span></a></th><th class="whitespace-nowrap px-3"><a href="#" class="hover:text-gray-700">CL<span class="text-gray-300 ml-0.5">&#9650;&#9660;</span></a></th><th class="whitespace-nowrap px-3"><a href="#" class="hover:text-gray-700">CV<span class="text-gray-300 ml-0.5">&#9650;&#9660;</span></a></th><th class="whitespace-nowrap px-3"><a href="#" class="hover:text-gray-700">CVR<span class="text-gray-300 ml-0.5">&#9650;&#9660;</span></a></th><th class="whitespace-nowrap px-3"><a href="#" class="hover:text-gray-700">初課金者<span class="text-gray-300 ml-0.5">&#9650;&#9660;</span></a></th><th class="whitespace-nowrap px-3"><a href="#" class="hover:text-gray-700">課金額<span class="text-gray-300 ml-0.5">&#9650;&#9660;</span></a></th><th class="whitespace-nowrap px-3"><a href="#" class="hover:text-gray-700">広告費<span class="text-gray-300 ml-0.5">&#9650;&#9660;</span></a></th><th class="whitespace-nowrap px-3"><a href="#" class="hover:text-gray-700">回収率<span class="text-gray-300 ml-0.5">&#9650;&#9660;</span></a></th><th class="text-center whitespace-nowrap px-3">編集</th></tr></thead>
+<tbody><tr class="border-b border-gray-50"><td class="py-2.5 whitespace-nowrap px-3">0</td><td class="whitespace-nowrap px-3"><a href="02020302_master_agency_detail.html" class="text-brand-600">-</a></td><td class="text-brand-600 px-3"><a href="02020202_master_code_detail.html" class="text-brand-600">コード無し</a></td><td class="whitespace-nowrap px-3 text-right"></td><td class="whitespace-nowrap px-3 text-right">1926</td><td class="whitespace-nowrap px-3 text-right">1</td><td class="whitespace-nowrap px-3 text-right">0.05%</td><td class="whitespace-nowrap px-3 text-right">-</td><td class="whitespace-nowrap px-3 text-right">0</td><td class="whitespace-nowrap px-3 text-right">0</td><td class="text-gray-400 whitespace-nowrap px-3 text-right">0%</td><td class="text-right whitespace-nowrap px-3"><a href="#" class="text-brand-600">編集</a></td></tr></tbody>
 </table></div></div></main>
 </div></div><script>
 function toggleSidebar(){

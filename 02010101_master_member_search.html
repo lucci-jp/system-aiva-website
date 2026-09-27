@@ -58,11 +58,12 @@
             <a href="#" title="マスタ管理トップへ" class="shrink-0 text-lg font-bold text-brand-600 hover:text-brand-700 hover:underline">マスタ管理</a>
         </div>
         <div class="flex items-center gap-2 lg:gap-3">
-            <button title="ログアウト" class="flex items-center gap-1 border border-gray-200 rounded-lg px-2 lg:px-3 py-2 text-gray-500 hover:bg-gray-50 text-sm leading-none shrink-0"><span>&#9211;</span><span class="hidden lg:inline">ログアウト</span></button>
+            <a href="01010101_login.html" title="ログアウト" class="flex items-center gap-1 border border-gray-200 rounded-lg px-2 lg:px-3 py-2 text-gray-500 hover:bg-gray-50 text-sm leading-none shrink-0"><span>&#9211;</span><span class="hidden lg:inline">ログアウト</span></a>
         </div>
     </header>
 
-<main class="p-4 lg:p-8 space-y-6">
+<!-- 準正常時：エラー項目の枠を border-gray-200 → border-red-400 に変え、直下の <p class="err-msg"> の hidden を外して文言を表示する -->
+    <main class="p-4 lg:p-8 space-y-6">
 <div data-page-title class="text-xl font-bold text-gray-900">会員検索(マスタ)</div>
 
 <div class="bg-brand-50 border border-brand-100 text-brand-700 text-xs rounded-lg px-4 py-2.5">
@@ -73,51 +74,213 @@
         <div class="font-semibold text-gray-800 mb-4 pb-3 border-b border-gray-100">会員検索パネル</div>
 
 <div class="mb-4">
-    <label class="block text-xs font-medium text-gray-600 mb-2">サイト種別</label>
-    <div class="flex flex-wrap gap-4 text-sm text-gray-700">
-        <label class="flex items-center gap-1.5"><input type="checkbox" name="site_types[]" value="競艇" class="rounded"> 競艇</label>
-        <label class="flex items-center gap-1.5"><input type="checkbox" name="site_types[]" value="競輪" class="rounded"> 競輪</label>
+    <div class="flex items-center gap-3 mb-2">
+        <span class="text-xs font-medium text-gray-600">競艇</span>
+        <button type="button" class="border border-gray-200 text-gray-600 hover:bg-gray-50 text-[11px] px-2 py-1 rounded-lg">全選択</button>
     </div>
-    <p class="text-[11px] text-gray-400 mt-1">未選択の場合は全種別が対象です。</p>
+    <div class="flex flex-wrap gap-x-4 gap-y-2 text-sm text-gray-700"><label class="flex items-center gap-1.5"><input type="checkbox" name="boat[]" class="rounded"> サイトA</label><label class="flex items-center gap-1.5"><input type="checkbox" name="boat[]" class="rounded"> サイトB</label></div>
 </div>
-<div class="mb-4">
-    <label class="block text-xs font-medium text-gray-600 mb-2">サイト(個別選択)</label>
-    <div class="flex flex-wrap gap-x-4 gap-y-2 text-sm text-gray-700">
-        <label class="flex items-center gap-1.5"><input type="checkbox" name="site_ids[]" value="1" class="rounded"> サイトA <span class="text-[10px] text-gray-400">(競艇)</span></label>
-        <label class="flex items-center gap-1.5"><input type="checkbox" name="site_ids[]" value="2" class="rounded"> サイトB <span class="text-[10px] text-gray-400">(競艇)</span></label>
-        <label class="flex items-center gap-1.5"><input type="checkbox" name="site_ids[]" value="3" class="rounded"> サイトC <span class="text-[10px] text-gray-400">(競輪)</span></label>
+<div class="mb-4 pb-4 border-b border-gray-100">
+    <div class="flex items-center gap-3 mb-2">
+        <span class="text-xs font-medium text-gray-600">競輪</span>
+        <button type="button" class="border border-gray-200 text-gray-600 hover:bg-gray-50 text-[11px] px-2 py-1 rounded-lg">全選択</button>
     </div>
-    <p class="text-[11px] text-gray-400 mt-1">未選択の場合は(サイト種別条件を満たす)全サイトが対象です。</p>
+    <div class="flex flex-wrap gap-x-4 gap-y-2 text-sm text-gray-700"><label class="flex items-center gap-1.5"><input type="checkbox" name="keirin[]" class="rounded"> サイトC</label></div>
 </div>
-
 <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-3">
     <div>
         <label class="block text-xs font-medium text-gray-600 mb-1">会員状態</label>
-        <select class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white">
-            <option>-- 選択 --</option>
-        </select>
+        <select class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white"><option>-- 選択 --</option><option>仮登録</option><option>本登録</option><option>退会</option><option>不正</option></select><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p>
     </div>
     <div>
-        <label class="block text-xs font-medium text-gray-600 mb-1">会員No</label>
-        <input type="text" placeholder="" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white">
+        <label class="block text-xs font-medium text-gray-600 mb-1">アドレス有無</label>
+        <select class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white"><option>-- 選択 --</option><option>アドレス有</option><option>アドレス無</option></select><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p>
     </div>
     <div>
-        <label class="block text-xs font-medium text-gray-600 mb-1">ニックネーム</label>
-        <input type="text" placeholder="" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white">
+        <label class="block text-xs font-medium text-gray-600 mb-1">ID検索</label>
+        <div class="flex items-center gap-2">
+            <input type="text" placeholder="最小" class="w-20 border border-gray-200 rounded-lg px-2 py-2 text-sm">
+            <span class="text-gray-400">〜</span>
+            <input type="text" placeholder="最大" class="w-20 border border-gray-200 rounded-lg px-2 py-2 text-sm">
+        </div><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p>
     </div>
 </div>
-<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4">
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-3">
     <div>
-        <label class="block text-xs font-medium text-gray-600 mb-1">LINE名</label>
-        <input type="text" placeholder="" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white">
+        <label class="block text-xs font-medium text-gray-600 mb-1">ニックネーム</label>
+        <input type="text" placeholder="" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white"><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p>
     </div>
     <div>
-        <label class="block text-xs font-medium text-gray-600 mb-1">Email</label>
-        <input type="text" placeholder="" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white">
+        <label class="block text-xs font-medium text-gray-600 mb-1">LINEアカウント名</label>
+        <input type="text" placeholder="" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white"><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p>
     </div>
+    <div>
+        <label class="block text-xs font-medium text-gray-600 mb-1">メールアドレス</label>
+        <input type="text" placeholder="" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white"><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p>
+    </div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-3">
+    <div>
+        <label class="block text-xs font-medium text-gray-600 mb-1">登録IP検索</label>
+        <input type="text" placeholder="" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white"><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p>
+    </div>
+    <div>
+        <label class="block text-xs font-medium text-gray-600 mb-1">ログインIP検索</label>
+        <input type="text" placeholder="" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white"><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p>
+    </div>
+    <div>
+        <label class="block text-xs font-medium text-gray-600 mb-1">UA</label>
+        <input type="text" placeholder="" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white"><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p>
+    </div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-3">
     <div>
         <label class="block text-xs font-medium text-gray-600 mb-1">広告コード</label>
-        <input type="text" placeholder="" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white">
+        <input type="text" placeholder="" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white"><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p>
+    </div>
+    <div>
+        <label class="block text-xs font-medium text-gray-600 mb-1">NOT広告コード</label>
+        <input type="text" placeholder="" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white"><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p>
+    </div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-3">
+    <div>
+        <label class="block text-xs font-medium text-gray-600 mb-1">ログイン回数</label>
+        <div class="flex items-center gap-2">
+            <input type="text" placeholder="最小" class="w-20 border border-gray-200 rounded-lg px-2 py-2 text-sm">
+            <span class="text-gray-400">〜</span>
+            <input type="text" placeholder="最大" class="w-20 border border-gray-200 rounded-lg px-2 py-2 text-sm">
+        </div><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p>
+    </div>
+    <div>
+        <label class="block text-xs font-medium text-gray-600 mb-1">有料商品購入回数</label>
+        <div class="flex items-center gap-2">
+            <input type="text" placeholder="最小" class="w-20 border border-gray-200 rounded-lg px-2 py-2 text-sm">
+            <span class="text-gray-400">〜</span>
+            <input type="text" placeholder="最大" class="w-20 border border-gray-200 rounded-lg px-2 py-2 text-sm">
+        </div><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p>
+    </div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-3">
+    <div>
+        <label class="block text-xs font-medium text-gray-600 mb-1">登録日</label>
+        <div class="flex items-center gap-2">
+            <input type="text" placeholder="最小" class="w-20 border border-gray-200 rounded-lg px-2 py-2 text-sm">
+            <span class="text-gray-400">〜</span>
+            <input type="text" placeholder="最大" class="w-20 border border-gray-200 rounded-lg px-2 py-2 text-sm">
+        </div><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p>
+    </div>
+    <div>
+        <label class="block text-xs font-medium text-gray-600 mb-1">最終ログイン日</label>
+        <div class="flex items-center gap-2">
+            <input type="text" placeholder="最小" class="w-20 border border-gray-200 rounded-lg px-2 py-2 text-sm">
+            <span class="text-gray-400">〜</span>
+            <input type="text" placeholder="最大" class="w-20 border border-gray-200 rounded-lg px-2 py-2 text-sm">
+        </div><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p>
+    </div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-3">
+    <div>
+        <label class="block text-xs font-medium text-gray-600 mb-1">初課金日</label>
+        <div class="flex items-center gap-2">
+            <input type="text" placeholder="最小" class="w-20 border border-gray-200 rounded-lg px-2 py-2 text-sm">
+            <span class="text-gray-400">〜</span>
+            <input type="text" placeholder="最大" class="w-20 border border-gray-200 rounded-lg px-2 py-2 text-sm">
+        </div><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p>
+    </div>
+    <div>
+        <label class="block text-xs font-medium text-gray-600 mb-1">最新課金日</label>
+        <div class="flex items-center gap-2">
+            <input type="text" placeholder="最小" class="w-20 border border-gray-200 rounded-lg px-2 py-2 text-sm">
+            <span class="text-gray-400">〜</span>
+            <input type="text" placeholder="最大" class="w-20 border border-gray-200 rounded-lg px-2 py-2 text-sm">
+        </div><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p>
+    </div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-3">
+    <div>
+        <label class="block text-xs font-medium text-gray-600 mb-1">最新課金額</label>
+        <div class="flex items-center gap-2">
+            <input type="text" placeholder="最小" class="w-20 border border-gray-200 rounded-lg px-2 py-2 text-sm">
+            <span class="text-gray-400">〜</span>
+            <input type="text" placeholder="最大" class="w-20 border border-gray-200 rounded-lg px-2 py-2 text-sm">
+        </div><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p>
+    </div>
+    <div>
+        <label class="block text-xs font-medium text-gray-600 mb-1">保有ポイント</label>
+        <div class="flex items-center gap-2">
+            <input type="text" placeholder="最小" class="w-20 border border-gray-200 rounded-lg px-2 py-2 text-sm">
+            <span class="text-gray-400">〜</span>
+            <input type="text" placeholder="最大" class="w-20 border border-gray-200 rounded-lg px-2 py-2 text-sm">
+        </div><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p>
+    </div>
+    <div>
+        <label class="block text-xs font-medium text-gray-600 mb-1">消費ポイント</label>
+        <div class="flex items-center gap-2">
+            <input type="text" placeholder="最小" class="w-20 border border-gray-200 rounded-lg px-2 py-2 text-sm">
+            <span class="text-gray-400">〜</span>
+            <input type="text" placeholder="最大" class="w-20 border border-gray-200 rounded-lg px-2 py-2 text-sm">
+        </div><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p>
+    </div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-3">
+    <div>
+        <label class="block text-xs font-medium text-gray-600 mb-1">課金額</label>
+        <div class="flex items-center gap-2">
+            <input type="text" placeholder="最小" class="w-20 border border-gray-200 rounded-lg px-2 py-2 text-sm">
+            <span class="text-gray-400">〜</span>
+            <input type="text" placeholder="最大" class="w-20 border border-gray-200 rounded-lg px-2 py-2 text-sm">
+        </div><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p>
+    </div>
+    <div>
+        <label class="block text-xs font-medium text-gray-600 mb-1">課金回数</label>
+        <div class="flex items-center gap-2">
+            <input type="text" placeholder="最小" class="w-20 border border-gray-200 rounded-lg px-2 py-2 text-sm">
+            <span class="text-gray-400">〜</span>
+            <input type="text" placeholder="最大" class="w-20 border border-gray-200 rounded-lg px-2 py-2 text-sm">
+        </div><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p>
+    </div>
+    <div>
+        <label class="block text-xs font-medium text-gray-600 mb-1">ボーナスP</label>
+        <div class="flex items-center gap-2">
+            <input type="text" placeholder="最小" class="w-20 border border-gray-200 rounded-lg px-2 py-2 text-sm">
+            <span class="text-gray-400">〜</span>
+            <input type="text" placeholder="最大" class="w-20 border border-gray-200 rounded-lg px-2 py-2 text-sm">
+        </div><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p>
+    </div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-3">
+    <div>
+        <label class="block text-xs font-medium text-gray-600 mb-1">LINE状態</label>
+        <select class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white"><option>-- 選択 --</option><option>LINE登録なし</option><option>LINE未ブロック</option><option>LINEブロック</option></select><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p>
+    </div>
+</div>
+<div class="mb-4">
+    <label class="block text-xs font-medium text-gray-600 mb-1">対象ライン</label>
+    <div class="flex flex-wrap gap-3 text-xs text-gray-600"><label class="flex items-center gap-1.5"><input type="checkbox" name="line[]" class="rounded"> LINE 5</label><label class="flex items-center gap-1.5"><input type="checkbox" name="line[]" class="rounded"> LINE 4</label><label class="flex items-center gap-1.5"><input type="checkbox" name="line[]" class="rounded"> LINE 3</label><label class="flex items-center gap-1.5"><input type="checkbox" name="line[]" class="rounded"> LINE 2</label><label class="flex items-center gap-1.5"><input type="checkbox" name="line[]" class="rounded"> LINE 1</label><label class="flex items-center gap-1.5"><input type="checkbox" name="line[]" class="rounded"> その他</label><label class="flex items-center gap-1.5"><input type="checkbox" name="line[]" class="rounded"> 空白</label></div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-3">
+    <div>
+        <label class="block text-xs font-medium text-gray-600 mb-1">参加商品OR</label>
+        <input type="text" placeholder="" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white"><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p>
+    </div>
+    <div>
+        <label class="block text-xs font-medium text-gray-600 mb-1">NOT参加商品OR</label>
+        <input type="text" placeholder="" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white"><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p>
+    </div>
+    <div>
+        <label class="block text-xs font-medium text-gray-600 mb-1">備考AND</label>
+        <input type="text" placeholder="" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white"><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p>
+    </div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-3">
+    <div>
+        <label class="block text-xs font-medium text-gray-600 mb-1">NOT備考AND</label>
+        <input type="text" placeholder="" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white"><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p>
+    </div>
+    <div>
+        <label class="block text-xs font-medium text-gray-600 mb-1">NOT備考OR</label>
+        <input type="text" placeholder="" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white"><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p>
     </div>
 </div>
 <button class="bg-brand-600 hover:bg-brand-700 text-white text-sm font-medium px-5 py-2.5 rounded-lg">検索実行</button>
@@ -125,32 +288,35 @@
     </div><div class="bg-white rounded-xl border border-gray-200 shadow-sm p-6 mt-6">
         <div class="font-semibold text-gray-800 mb-4 pb-3 border-b border-gray-100">会員一覧(全サイト横断)</div>
 
-<div class="flex items-center justify-between mb-4">
-    <div class="font-semibold text-gray-800">検索結果</div>
-    <input type="text" placeholder="Search" class="border border-gray-200 rounded-lg px-3 py-1.5 text-sm w-52">
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
+    <div class="font-semibold text-gray-800">検索結果(&#12288;件)</div>
+    <div class="flex items-center gap-2">
+        <label class="text-xs font-medium text-gray-600 shrink-0">Search</label>
+        <input type="text" placeholder="" class="border border-gray-200 rounded-lg px-3 py-1.5 text-sm w-52">
+    </div>
 </div>
-<div class="overflow-x-auto"><table class="w-full text-sm">
+<div class="overflow-x-auto"><table class="w-full text-sm"><colgroup><col><col class="w-px"><col class="w-px"><col class="w-px"><col class="w-px"><col><col><col><col class="w-px"><col class="w-px"></colgroup>
     <thead>
-        <tr class="text-left text-xs text-gray-500 border-b border-gray-100">
-            <th class="py-2">ID</th><th>サイト</th><th>広告コード</th><th>ログイン回数</th><th>会員状態</th>
-            <th>LINE名</th><th>メール</th><th>入会日</th><th class="text-right">編集</th>
+        <tr class="text-center text-xs text-gray-500 border-b border-gray-100">
+            <th class="py-2 px-3">サイト名</th><th class="whitespace-nowrap px-3"><a href="#" class="inline-flex items-center gap-1 hover:text-gray-700">ID <span class="text-gray-800">&#9660;</span></a></th><th class="whitespace-nowrap px-3"><a href="#" class="inline-flex items-center gap-1 hover:text-gray-700">広告コード <span class="text-gray-300">&#8645;</span></a></th><th class="whitespace-nowrap px-3"><a href="#" class="inline-flex items-center gap-1 hover:text-gray-700">ログイン回数 <span class="text-gray-300">&#8645;</span></a></th>
+            <th class="whitespace-nowrap px-3"><a href="#" class="inline-flex items-center gap-1 hover:text-gray-700">会員状態 <span class="text-gray-300">&#8645;</span></a></th><th class="px-3"><a href="#" class="inline-flex items-center gap-1 hover:text-gray-700">LINE名 <span class="text-gray-300">&#8645;</span></a></th><th class="px-3"><a href="#" class="inline-flex items-center gap-1 hover:text-gray-700">メール <span class="text-gray-300">&#8645;</span></a></th><th class="px-3"><a href="#" class="inline-flex items-center gap-1 hover:text-gray-700">LINEメール <span class="text-gray-300">&#8645;</span></a></th><th class="whitespace-nowrap px-3"><a href="#" class="inline-flex items-center gap-1 hover:text-gray-700">入会日 <span class="text-gray-300">&#8645;</span></a></th><th class="text-center whitespace-nowrap px-3">編集</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td class="py-2">00005</td>
-            <td><span class="inline-flex items-center gap-1 bg-brand-50 text-brand-700 text-[11px] px-2 py-0.5 rounded-full">サイトA <span class="text-brand-400">・競艇</span></span></td>
-            <td>コード無し</td><td>3</td><td>本登録</td><td>yam</td><td>yam_????@icloud.com</td><td>2026-07-01</td>
-            <td class="text-right"><a href="01030102_member_detail.html" class="text-brand-600 text-xs">詳細</a></td>
+            <td class="py-2 px-3"><span class="inline-flex items-center gap-1 bg-brand-50 text-brand-700 text-[11px] px-2 py-0.5 rounded-full">サイトA <span class="text-brand-400">・競艇</span></span></td>
+            <td class="whitespace-nowrap px-3">00005</td>
+            <td class="whitespace-nowrap px-3">コード無し</td><td class="whitespace-nowrap px-3 text-right">3</td><td class="whitespace-nowrap px-3">本登録</td><td class="px-3">yam</td><td class="px-3">yam_????@icloud.com</td><td class="px-3">yam_????@icloud.com</td><td class="whitespace-nowrap px-3">2026-07-01</td>
+            <td class="text-right whitespace-nowrap px-3"><a href="01030102_member_detail.html" class="text-brand-600 text-xs">詳細</a></td>
         </tr>
         <tr>
-            <td class="py-2">00120</td>
-            <td><span class="inline-flex items-center gap-1 bg-brand-50 text-brand-700 text-[11px] px-2 py-0.5 rounded-full">サイトC <span class="text-brand-400">・競輪</span></span></td>
-            <td>AFF-102</td><td>1</td><td>本登録</td><td>keirin_taro</td><td>taro_????@gmail.com</td><td>2026-08-14</td>
-            <td class="text-right"><a href="01030102_member_detail.html" class="text-brand-600 text-xs">詳細</a></td>
+            <td class="py-2 px-3"><span class="inline-flex items-center gap-1 bg-brand-50 text-brand-700 text-[11px] px-2 py-0.5 rounded-full">サイトC <span class="text-brand-400">・競輪</span></span></td>
+            <td class="whitespace-nowrap px-3">00120</td>
+            <td class="whitespace-nowrap px-3">AFF-102</td><td class="whitespace-nowrap px-3 text-right">1</td><td class="whitespace-nowrap px-3">本登録</td><td class="px-3">keirin_taro</td><td class="px-3">taro_????@gmail.com</td><td class="px-3">taro_????@gmail.com</td><td class="whitespace-nowrap px-3">2026-08-14</td>
+            <td class="text-right whitespace-nowrap px-3"><a href="01030102_member_detail.html" class="text-brand-600 text-xs">詳細</a></td>
         </tr>
-        <tr><td colspan="9" class="text-center text-gray-400 py-8">上記は表示イメージです。検索条件を変更すると全サイト横断で再検索します</td></tr>
-    </tbody>
+        <tr><td colspan="10" class="text-center text-gray-400 py-8 px-3">上記は表示イメージです。検索条件を変更すると全サイト横断で再検索します</td></tr>
+    </tbody><!-- 準正常時（検索結果なし）：この tbody を表示し、上の「検索結果(　件)」を「検索結果(0 件)」にする --><tbody class="hidden"><tr><td colspan="10" class="py-8 px-3 text-center text-sm text-gray-500">検索結果 0 件</td></tr></tbody>
 </table></div>
 
     </div>

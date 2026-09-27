@@ -39,20 +39,12 @@
     <div id="sidebarOverlay" onclick="toggleMenu()" class="hidden fixed inset-0 bg-black/40 z-40"></div>
     <aside id="sidebar" class="fixed inset-y-0 left-0 w-[78%] max-w-[320px] bg-side-900 text-white flex flex-col z-50 -translate-x-full transition-transform duration-200">
         <div class="flex items-center justify-between px-4 py-4 border-b border-white/10">
-            <div class="flex items-center gap-2">
-                <div class="w-8 h-8 rounded-lg bg-brand-600 flex items-center justify-center font-bold">S</div>
-                <div>
-                    <div class="font-bold leading-none text-sm">SystemRocky</div>
-                    <div class="text-[10px] text-gray-500">ADMIN</div>
-                </div>
-            </div>
+            <a href="01030101_member_search.html" class="font-bold text-sm text-white hover:underline">サイト AAA</a>
             <button onclick="toggleMenu()" class="text-gray-400 text-xl leading-none px-2">&times;</button>
         </div>
         <div class="mx-4 my-3 p-3 bg-side-800 rounded-lg flex items-center gap-2">
-            <div class="w-7 h-7 rounded-full bg-brand-500 flex items-center justify-center text-xs font-bold">AJ</div>
-            <div class="text-xs">
-                <div class="font-medium">jukawaOP</div>
-            </div>
+            <div class="w-7 h-7 rounded-full bg-brand-500 flex items-center justify-center text-xs font-bold">本</div>
+            <div class="text-xs font-medium">本社管理者</div>
         </div>
         <div class="px-4 mb-3">
             <div class="flex items-center gap-2">
@@ -61,7 +53,7 @@
             </div>
         </div>
         <nav class="flex-1 px-3 space-y-1 overflow-y-auto text-sm">
-            <details class="group" open><summary class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white cursor-pointer list-none select-none"><span>会員管理</span><span class="text-[10px] text-gray-500 transition-transform group-open:rotate-90">&#9654;</span></summary><div class="mt-1 mb-1 ml-3 pl-3 border-l border-white/10 space-y-1"><a href="01030101_member_search.html" class="block px-3 py-1.5 rounded-lg text-sm bg-brand-600 text-white font-medium">会員一覧</a><a href="01030201_point_log.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">会員行動ログ</a><a href="01030301_duplicate_list.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">重複会員一覧</a><a href="01110301_code_error_list.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">コードミス会員一覧</a><a href="01030104_code_search.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">コード特定</a></div></details>
+            <details class="group" open><summary class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white cursor-pointer list-none select-none"><span>会員管理</span><span class="text-[10px] text-gray-500 transition-transform group-open:rotate-90">&#9654;</span></summary><div class="mt-1 mb-1 ml-3 pl-3 border-l border-white/10 space-y-1"><a href="01030101_member_search.html" class="block px-3 py-1.5 rounded-lg text-sm bg-brand-600 text-white font-medium">会員一覧</a><a href="01030201_point_log.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">会員行動ログ</a><a href="01030301_duplicate_list.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">重複会員一覧</a><a href="01030104_code_search.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">コード特定</a></div></details>
             <details class="group"><summary class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white cursor-pointer list-none select-none"><span>グループ管理</span><span class="text-[10px] text-gray-500 transition-transform group-open:rotate-90">&#9654;</span></summary><div class="mt-1 mb-1 ml-3 pl-3 border-l border-white/10 space-y-1"><a href="01040101_group_list.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">グループ一覧</a></div></details>
             <details class="group"><summary class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white cursor-pointer list-none select-none"><span>タグ管理</span><span class="text-[10px] text-gray-500 transition-transform group-open:rotate-90">&#9654;</span></summary><div class="mt-1 mb-1 ml-3 pl-3 border-l border-white/10 space-y-1"><a href="01050101_tag_list.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">タグ一覧</a></div></details>
             <details class="group"><summary class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white cursor-pointer list-none select-none"><span>マガジン管理</span><span class="text-[10px] text-gray-500 transition-transform group-open:rotate-90">&#9654;</span></summary><div class="mt-1 mb-1 ml-3 pl-3 border-l border-white/10 space-y-1"><a href="01060101_step_list.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">ステップメール</a><a href="01060201_template_list.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">マガジン編集・送信</a><a href="01060301_broadcast_history.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">マガジン送信履歴</a></div></details>
@@ -70,7 +62,7 @@
             <a href="01080401_product_list.html" class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white"><span>商品一覧</span></a>
             <details class="group"><summary class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white cursor-pointer list-none select-none"><span>サイト管理</span><span class="text-[10px] text-gray-500 transition-transform group-open:rotate-90">&#9654;</span></summary><div class="mt-1 mb-1 ml-3 pl-3 border-l border-white/10 space-y-1"><a href="01090101_voice_list.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">会員様の声</a><a href="01090201_result_list.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">投資実績</a><a href="01090301_line_config_index.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">LINEコンフィグ</a><a href="01090401_site_config_list.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">サイトコンフィグ</a></div></details>
             <details class="group"><summary class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white cursor-pointer list-none select-none"><span>売り上げ管理</span><span class="text-[10px] text-gray-500 transition-transform group-open:rotate-90">&#9654;</span></summary><div class="mt-1 mb-1 ml-3 pl-3 border-l border-white/10 space-y-1"><a href="01100101_daily_sales.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">日別売り上げ</a><a href="01100201_monthly_sales.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">月別売り上げ</a><a href="01100301_monthly_recovery_rate.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">月別回収率</a></div></details>
-            <details class="group"><summary class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white cursor-pointer list-none select-none"><span>広告管理</span><span class="text-[10px] text-gray-500 transition-transform group-open:rotate-90">&#9654;</span></summary><div class="mt-1 mb-1 ml-3 pl-3 border-l border-white/10 space-y-1"><a href="01110101_agency_list.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">広告代理店管理</a><a href="01110201_ad_effect.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">広告効果</a></div></details>
+            <details class="group"><summary class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white cursor-pointer list-none select-none"><span>広告管理</span><span class="text-[10px] text-gray-500 transition-transform group-open:rotate-90">&#9654;</span></summary><div class="mt-1 mb-1 ml-3 pl-3 border-l border-white/10 space-y-1"><a href="01110101_agency_list.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">広告代理店管理</a><a href="01110201_ad_effect.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">広告効果</a><a href="01110301_code_error_list.html" class="block px-3 py-1.5 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white">コードミス会員一覧</a></div></details>
             <a href="#" class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white"><span>サイト</span></a>
             <details class="group"><summary class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white cursor-pointer list-none select-none"><span>代理店管理画面</span><span class="text-[10px] text-gray-500 transition-transform group-open:rotate-90">&#9654;</span></summary><div class="mt-1 mb-1 ml-3 pl-3 border-l border-white/10"><div class="px-3 py-1.5 text-xs text-gray-600">（項目未定）</div></div></details>
             <a href="#" class="flex items-center justify-between px-3 py-2 rounded-lg text-sm text-gray-400 hover:bg-side-800 hover:text-white"><span>アクセス解析</span></a>
@@ -84,24 +76,23 @@
         <div class="flex-1 min-w-0">
             <div class="text-base font-bold text-gray-900 truncate">会員詳細</div>
         </div>
-        <button class="relative shrink-0 border border-gray-200 rounded-lg p-2 text-gray-500 text-sm">
-            &#128276;
-            <span class="absolute -top-1 -right-1 bg-red-500 text-white text-[9px] rounded-full w-4 h-4 flex items-center justify-center">3</span>
-        </button>
     </header>
 
+    <!-- 準正常時：エラー項目の枠を border-gray-200 → border-red-400 に変え、直下の <p class="err-msg"> の hidden を外して文言を表示する -->
     <main class="flex-1 overflow-y-auto pb-24">
 
         <!-- 会員サマリーカード -->
         <div class="bg-brand-600 text-white px-4 pt-4 pb-5">
-            <div class="text-[11px] opacity-80 mb-1">本登録会員(LINE)</div>
+            <div class="text-[11px] opacity-80 mb-1">本登録</div>
             <div class="flex items-center justify-between">
-                <div>
+                <div class="min-w-0">
                     <div class="text-xl font-bold leading-none">00005 さん</div>
                     <div class="text-[11px] opacity-80 mt-1">line: yam ／ id: 00005</div>
+                    <div class="text-[11px] opacity-80">pas: ********</div>
                 </div>
-                <div class="flex gap-2">
+                <div class="flex flex-col gap-1 shrink-0">
                     <button class="bg-white/20 active:bg-white/30 text-[11px] px-3 py-1.5 rounded-lg">ログイン</button>
+                    <button class="bg-white/20 active:bg-white/30 text-[11px] px-3 py-1.5 rounded-lg">ログアウト</button>
                 </div>
             </div>
         </div>
@@ -110,19 +101,31 @@
         <div class="grid grid-cols-2 gap-3 px-4 -mt-3">
             <div class="bg-white rounded-xl border border-gray-200 shadow-sm p-3">
                 <div class="text-[10px] text-gray-500">保有ポイント</div>
-                <div class="text-base font-bold">3,319<span class="text-xs font-normal">pt</span></div>
+                <div class="text-sm font-semibold">3,319<span class="text-xs font-normal">pt</span></div>
             </div>
             <div class="bg-white rounded-xl border border-gray-200 shadow-sm p-3">
-                <div class="text-[10px] text-gray-500">購入金額</div>
-                <div class="text-base font-bold">&yen;0</div>
+                <div class="text-[10px] text-gray-500">課金額</div>
+                <div class="text-sm font-semibold">&yen;0</div>
             </div>
             <div class="bg-white rounded-xl border border-gray-200 shadow-sm p-3">
-                <div class="text-[10px] text-gray-500">購入回数</div>
-                <div class="text-base font-bold">0回</div>
+                <div class="text-[10px] text-gray-500">課金回数</div>
+                <div class="text-sm font-semibold">0回</div>
             </div>
             <div class="bg-white rounded-xl border border-gray-200 shadow-sm p-3">
-                <div class="text-[10px] text-gray-500">最終ログイン</div>
+                <div class="text-[10px] text-gray-500">最終課金日</div>
+                <div class="text-sm font-semibold">&#8212;</div>
+            </div>
+            <div class="bg-white rounded-xl border border-gray-200 shadow-sm p-3">
+                <div class="text-[10px] text-gray-500">最終ログイン日</div>
                 <div class="text-sm font-semibold">2026-07-29</div>
+            </div>
+            <div class="bg-white rounded-xl border border-gray-200 shadow-sm p-3">
+                <div class="text-[10px] text-gray-500">広告コード</div>
+                <div class="text-sm font-semibold">コード無し</div>
+            </div>
+            <div class="bg-white rounded-xl border border-gray-200 shadow-sm p-3 col-span-2">
+                <div class="text-[10px] text-gray-500">媒体名</div>
+                <div class="text-sm font-semibold">&#8212;</div>
             </div>
         </div>
 
@@ -138,91 +141,201 @@
         <!-- ユーザー情報タブ -->
         <div id="tab-info" class="tab-panel px-4 mt-4 space-y-3">
             <div class="bg-white rounded-xl border border-gray-200 p-4 space-y-3">
-                <div class="grid grid-cols-2 gap-3">
-                    <div><label class="block text-[11px] font-medium text-gray-600 mb-1">会員状態</label>
-                        <select class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm"><option>本登録</option></select></div>
-                    <div><label class="block text-[11px] font-medium text-gray-600 mb-1">メール状態</label>
-                        <select class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm"><option>未判定</option></select></div>
-                </div>
-                <div><label class="block text-[11px] font-medium text-gray-600 mb-1">LINE状態</label>
-                    <select class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm"><option>LINE未ブロック</option></select></div>
-                <div class="grid grid-cols-2 gap-3">
-                    <div><label class="block text-[11px] font-medium text-gray-600 mb-1">会員No</label>
-                        <input type="text" value="5" disabled class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm bg-gray-50 text-gray-400"></div>
-                    <div><label class="block text-[11px] font-medium text-gray-600 mb-1">ID</label>
-                        <input type="text" value="00005" disabled class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm bg-gray-50 text-gray-400"></div>
-                </div>
-                <div><label class="block text-[11px] font-medium text-gray-600 mb-1">ニックネーム</label>
-                    <input type="text" value="00005" class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm"></div>
-                <div><label class="block text-[11px] font-medium text-gray-600 mb-1">Email</label>
-                    <input type="text" value="yam_????@icloud.com" class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm"></div>
-                <div><label class="block text-[11px] font-medium text-gray-600 mb-1">PCMAIL</label>
-                    <input type="text" value="syou??????@gmail.com" class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm"></div>
-                <div><label class="block text-[11px] font-medium text-gray-600 mb-1">LINEメール</label>
-                    <input type="text" value="yam_????@icloud.com" class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm"></div>
-                <div><label class="block text-[11px] font-medium text-gray-600 mb-1">LINE名</label>
-                    <input type="text" value="yam" class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm"></div>
-                <div class="grid grid-cols-2 gap-3">
-                    <div><label class="block text-[11px] font-medium text-gray-600 mb-1">利用LineNo</label>
-                        <input type="text" value="1" class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm"></div>
-                    <div><label class="block text-[11px] font-medium text-gray-600 mb-1">パスワード</label>
-                        <input type="text" value="********" class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm"></div>
-                </div>
-                <div><label class="block text-[11px] font-medium text-gray-600 mb-1">広告コード</label>
-                    <input type="text" value="コード無し" class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm"></div>
-                <div><label class="block text-[11px] font-medium text-gray-600 mb-1">登録IP</label>
-                    <input type="text" value="147.92.179.111" disabled class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm bg-gray-50 text-gray-400"></div>
-                <div><label class="block text-[11px] font-medium text-gray-600 mb-1">ログインIP</label>
-                    <input type="text" value="118.238.87.158" disabled class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm bg-gray-50 text-gray-400"></div>
+                <div class="font-semibold text-sm mb-3 pb-2 border-b border-gray-100">会員詳細情報</div>
+                <div class="grid grid-cols-2 gap-3"><div><label class="block text-[11px] font-medium text-gray-600 mb-1">会員状態</label><select class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm"><option>仮登録</option><option selected>本登録</option><option>退会</option><option>不正</option></select><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p></div><div><label class="block text-[11px] font-medium text-gray-600 mb-1">メール状態</label><select class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm"><option selected>未判定</option><option>有効</option><option>無効</option></select><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p></div></div>
+                <div><label class="block text-[11px] font-medium text-gray-600 mb-1">LINE状態</label><select class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm"><option>LINE登録なし</option><option selected>LINE未ブロック</option><option>LINEブロック</option></select><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p></div>
+                <div class="grid grid-cols-2 gap-3"><div><label class="block text-[11px] font-medium text-gray-600 mb-1">会員NO</label><input type="text" value="5" disabled class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm bg-gray-50 text-gray-400"><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p></div><div><label class="block text-[11px] font-medium text-gray-600 mb-1">会員ID</label><input type="text" value="00005" disabled class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm bg-gray-50 text-gray-400"><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p></div></div>
+                <div><label class="block text-[11px] font-medium text-gray-600 mb-1">ニックネーム</label><input type="text" value="00005"  class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm"><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p></div>
+                <div class="flex items-start gap-3"><div><label class="block text-[11px] font-medium text-gray-600 mb-1">LINE画像</label><div class="w-16 h-16 rounded-full bg-gray-100 border border-gray-200 flex items-center justify-center text-[9px] text-gray-400 text-center leading-tight">LINE<br>アイコン</div></div><div class="flex-1 min-w-0 space-y-3"><div><label class="block text-[11px] font-medium text-gray-600 mb-1">LINE名</label><input type="text" value="yam" disabled class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm bg-gray-50 text-gray-400"><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p></div><div><label class="block text-[11px] font-medium text-gray-600 mb-1">LINE NO</label><input type="text" value="1" disabled class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm bg-gray-50 text-gray-400"><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p></div></div></div>
+                <div><label class="block text-[11px] font-medium text-gray-600 mb-1">LINEプロフ</label><input type="text" value="" disabled class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm bg-gray-50 text-gray-400"><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p></div>
+                <div><label class="block text-[11px] font-medium text-gray-600 mb-1">LINEメール</label><input type="text" value="yam_????@icloud.com" disabled class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm bg-gray-50 text-gray-400"><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p></div>
+                <div class="grid grid-cols-2 gap-3"><div><label class="block text-[11px] font-medium text-gray-600 mb-1">メールアドレス1</label><input type="text" value="yam_????@icloud.com" disabled class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm bg-gray-50 text-gray-400"><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p></div><div><label class="block text-[11px] font-medium text-gray-600 mb-1">メールアドレス2</label><input type="text" value="syou??????@gmail.com" disabled class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm bg-gray-50 text-gray-400"><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p></div></div>
+                <div class="-mt-1"><a href="#" class="text-[11px] text-brand-600">アドレスの表示・編集</a></div>
+                <div><label class="block text-[11px] font-medium text-gray-600 mb-1">PAS</label><input type="text" value="********"  class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm"><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p></div>
+                <div class="grid grid-cols-2 gap-3"><div><label class="block text-[11px] font-medium text-gray-600 mb-1">保有ポイント</label><div class="flex gap-2"><input type="text" value="3,319" disabled class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm bg-gray-50 text-gray-400"><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p><button type="button" class="shrink-0 border border-gray-200 text-gray-600 text-xs px-2 rounded-lg">-100</button></div></div><div><label class="block text-[11px] font-medium text-gray-600 mb-1">ボーナスPT</label><input type="text" value="0" disabled class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm bg-gray-50 text-gray-400"><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p></div></div>
+                <div class="grid grid-cols-2 gap-3"><div><label class="block text-[11px] font-medium text-gray-600 mb-1">広告コード</label><input type="text" value="コード無し"  class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm"><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p></div><div><label class="block text-[11px] font-medium text-gray-600 mb-1">媒体名</label><input type="text" value="" disabled class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm bg-gray-50 text-gray-400"><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p></div></div>
+                <div class="grid grid-cols-2 gap-3"><div><label class="block text-[11px] font-medium text-gray-600 mb-1">登録IP</label><input type="text" value="147.92.179.111" disabled class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm bg-gray-50 text-gray-400"><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p></div><div><label class="block text-[11px] font-medium text-gray-600 mb-1">登録UA</label><input type="text" value="" disabled class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm bg-gray-50 text-gray-400"><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p></div></div>
+                <div class="grid grid-cols-2 gap-3"><div><label class="block text-[11px] font-medium text-gray-600 mb-1">最終ログインIP</label><input type="text" value="118.238.87.158" disabled class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm bg-gray-50 text-gray-400"><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p></div><div><label class="block text-[11px] font-medium text-gray-600 mb-1">最終ログインUA</label><input type="text" value="" disabled class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm bg-gray-50 text-gray-400"><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p></div></div>
+                <div class="grid grid-cols-2 gap-3"><div><label class="block text-[11px] font-medium text-gray-600 mb-1">入会日</label><input type="text" value="" disabled class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm bg-gray-50 text-gray-400"><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p></div><div><label class="block text-[11px] font-medium text-gray-600 mb-1">LINE連携日時</label><input type="text" value="" disabled class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm bg-gray-50 text-gray-400"><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p></div></div>
+                <div class="grid grid-cols-2 gap-3"><div><label class="block text-[11px] font-medium text-gray-600 mb-1">最終ログイン</label><input type="text" value="2026-07-29" disabled class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm bg-gray-50 text-gray-400"><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p></div><div><label class="block text-[11px] font-medium text-gray-600 mb-1">最終問い合わせ日時</label><input type="text" value="" disabled class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm bg-gray-50 text-gray-400"><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p></div></div>
+                <div class="grid grid-cols-2 gap-3"><div><label class="block text-[11px] font-medium text-gray-600 mb-1">最終課金日</label><input type="text" value="" disabled class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm bg-gray-50 text-gray-400"><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p></div><div><label class="block text-[11px] font-medium text-gray-600 mb-1">初課金日</label><input type="text" value="" disabled class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm bg-gray-50 text-gray-400"><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p></div></div>
+                <div class="grid grid-cols-2 gap-3"><div><label class="block text-[11px] font-medium text-gray-600 mb-1">課金回数</label><input type="text" value="0" disabled class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm bg-gray-50 text-gray-400"><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p></div><div><label class="block text-[11px] font-medium text-gray-600 mb-1">課金額</label><input type="text" value="0" disabled class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm bg-gray-50 text-gray-400"><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p></div></div>
+                <div><label class="block text-[11px] font-medium text-gray-600 mb-1">参加商品</label><input type="text" value=""  class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm"><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p></div>
+                <div><label class="block text-[11px] font-medium text-gray-600 mb-1">備考タグ</label><textarea rows="3" class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm"></textarea><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p></div>
+                <div><label class="block text-[11px] font-medium text-gray-600 mb-1">メモ</label><textarea rows="3" class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm"></textarea><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p></div>
+                <button type="button" class="w-full border border-gray-200 text-gray-600 text-xs font-medium py-2.5 rounded-lg">最新ユーザー情報取得</button>
             </div>
 
             <div class="bg-white rounded-xl border border-gray-200 p-4">
-                <div class="font-semibold text-sm mb-2">銀行振り込み処理</div>
-                <div class="flex gap-2">
-                    <input type="text" placeholder="point" class="flex-1 min-w-0 border border-gray-200 rounded-lg px-2 py-2 text-sm">
-                    <button class="bg-brand-600 text-white text-xs px-4 rounded-lg shrink-0">実行</button>
-                </div>
+                <div class="font-semibold text-sm mb-2">備考</div>
+                <div class="text-sm text-gray-500">備考タグの内容を表示</div>
             </div>
             <div class="bg-white rounded-xl border border-gray-200 p-4">
-                <div class="font-semibold text-sm mb-1">手動ポイント加算・減算</div>
-                <p class="text-[11px] text-gray-400 mb-2">減算の場合は - にしてください</p>
+                <div class="font-semibold text-sm mb-2">ユーザーメモ</div>
+                <div class="text-sm text-gray-500">メモの内容を表示</div>
+            </div>
+
+            <div class="bg-white rounded-xl border border-gray-200 p-4">
+                <div class="font-semibold text-sm mb-2">手動銀行振込</div>
+                <p class="text-[11px] text-gray-400 mb-2">入力したポイント数で銀行振込売上反映</p>
                 <div class="flex gap-2">
                     <input type="text" placeholder="point" class="flex-1 min-w-0 border border-gray-200 rounded-lg px-2 py-2 text-sm">
                     <button class="bg-brand-600 text-white text-xs px-4 rounded-lg shrink-0">実行</button>
-                </div>
+                </div><!-- 準正常時：入力情報を削除して赤くエラー表示 --><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p>
+            </div>
+            <div class="bg-white rounded-xl border border-gray-200 p-4">
+                <div class="font-semibold text-sm mb-2">手動ポイント変更</div>
+                <p class="text-[11px] text-gray-400 mb-2">入力したポイント数で保有ポイントを変更（減算は - を付けてください）</p>
+                <div class="flex gap-2">
+                    <input type="text" placeholder="point" class="flex-1 min-w-0 border border-gray-200 rounded-lg px-2 py-2 text-sm">
+                    <button class="bg-brand-600 text-white text-xs px-4 rounded-lg shrink-0">実行</button>
+                </div><!-- 準正常時：入力情報を削除して赤くエラー表示 --><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p>
             </div>
 
             <details class="bg-white rounded-xl border border-gray-200">
-                <summary class="p-4 text-sm text-gray-700 font-medium">参加グループ一覧</summary>
-                <div class="px-4 pb-4 text-xs text-gray-500">対象データなし</div>
+                <summary class="p-4 text-sm text-gray-700 font-medium">参加グループ</summary>
+                <div class="px-4 pb-4">
+                    <div class="flex justify-between gap-2 text-sm"><a href="01040101_group_list.html" class="text-brand-600 truncate">グループ管理名を表示</a><span class="text-[11px] text-gray-400 shrink-0">グループNOを表示</span></div>
+                </div>
             </details>
             <details class="bg-white rounded-xl border border-gray-200">
-                <summary class="p-4 text-sm text-gray-700 font-medium">購入中の商品一覧</summary>
-                <div class="px-4 pb-4 text-xs text-gray-500">対象データなし</div>
+                <summary class="p-4 text-sm text-gray-700 font-medium">購入中商品</summary>
+                <div class="px-4 pb-4">
+                    <div class="flex justify-between gap-2 text-sm"><a href="01080402_product_detail.html" class="text-brand-600 truncate">商品管理名を表示</a><span class="text-[11px] text-gray-400 shrink-0">商品NOを表示</span></div>
+                </div>
             </details>
             <details class="bg-white rounded-xl border border-gray-200">
-                <summary class="p-4 text-sm text-gray-700 font-medium">表示中商品一覧</summary>
-                <div class="px-4 pb-4 text-xs text-gray-500">対象データなし</div>
+                <summary class="p-4 text-sm text-gray-700 font-medium">表示中商品</summary>
+                <div class="px-4 pb-4">
+                    <div class="flex justify-between gap-2 text-sm"><a href="01080402_product_detail.html" class="text-brand-600 truncate">表示中の商品管理名を表示</a><span class="text-[11px] text-gray-400 shrink-0">商品NOを表示</span></div>
+                </div>
             </details>
             <details class="bg-white rounded-xl border border-gray-200 mb-2">
-                <summary class="p-4 text-sm text-gray-700 font-medium">過去購入商品一覧</summary>
-                <div class="px-4 pb-4 text-xs text-gray-500">対象データなし</div>
+                <summary class="p-4 text-sm text-gray-700 font-medium">過去購入商品</summary>
+                <div class="px-4 pb-4">
+                    <div class="flex justify-between gap-2 text-sm"><a href="01080402_product_detail.html" class="text-brand-600 truncate">過去購入商品の管理名を表示</a><span class="text-[11px] text-gray-400 shrink-0">商品NOを表示</span></div>
+                </div>
             </details>
         </div>
 
         <!-- メッセージタブ -->
-        <div id="tab-msg" class="tab-panel px-4 mt-4 hidden">
-            <div class="bg-white rounded-xl border border-gray-200 p-4 text-sm text-gray-500 text-center py-10">
-                メッセージ履歴はまだありません
+        <div id="tab-msg" class="tab-panel px-4 mt-4 space-y-3 hidden">
+
+            <div class="bg-white rounded-xl border border-gray-200 p-4">
+                <div class="font-semibold text-sm mb-3 pb-2 border-b border-gray-100">メッセージ</div>
+                <div class="space-y-3">
+                    <div>
+                        <label class="block text-[11px] font-medium text-gray-600 mb-1">FROM</label>
+                        <select class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm"><option>-- 選択 --</option></select><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p>
+                    </div>
+                    <div>
+                        <label class="block text-[11px] font-medium text-gray-600 mb-1">タイトル</label>
+                        <input type="text" placeholder="" class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm"><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p>
+                    </div>
+                    <div>
+                        <label class="block text-[11px] font-medium text-gray-600 mb-1">タグ一覧</label>
+                        <div class="flex gap-2">
+                            <div class="flex-1 min-w-0 border border-gray-200 rounded-lg px-2 py-2 text-sm text-gray-400 bg-gray-50">タグカテゴリーを表示</div>
+                            <button type="button" class="border border-gray-200 text-gray-600 active:bg-gray-50 text-xs font-medium px-4 py-2 rounded-lg shrink-0">タグ一覧</button>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-[11px] font-medium text-gray-600 mb-1">本文</label>
+                        <textarea rows="5" class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm"></textarea><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <button type="button" class="bg-brand-600 active:bg-brand-700 text-white text-xs font-medium px-4 py-2 rounded-lg">メール送信</button>
+                        <button type="button" class="border border-gray-200 text-gray-600 active:bg-gray-50 text-xs font-medium px-4 py-2 rounded-lg">一括返信済</button>
+                    </div>
+                </div>
             </div>
+
+            <div class="bg-white rounded-xl border border-gray-200 p-4">
+                <div class="font-semibold text-sm mb-3 pb-2 border-b border-gray-100">受信メッセージ</div>
+                <div class="border border-gray-200 rounded-lg p-3 space-y-2">
+                    <div class="flex flex-wrap gap-x-3 gap-y-1 text-[11px] text-gray-400">
+                        <span>受信方法を表示</span>
+                        <span>受信日時を表示</span>
+                        <span>メッセージNOを表示</span>
+                    </div>
+                    <div class="text-[11px] text-gray-400">返信済処理をしたオペレーターIDと処理日時を表示</div>
+                    <div class="text-sm font-medium text-gray-800">メッセージタイトルを表示</div>
+                    <div class="text-sm text-gray-600">メッセージ本文を表示</div>
+                    <div class="flex flex-wrap gap-2 pt-1">
+                        <button type="button" class="border border-gray-200 text-gray-600 active:bg-gray-50 text-xs font-medium px-4 py-2 rounded-lg">返信済</button>
+                        <button type="button" class="border border-gray-200 text-gray-600 active:bg-gray-50 text-xs font-medium px-4 py-2 rounded-lg">お気に入り</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl border border-gray-200 p-4">
+                <div class="font-semibold text-sm mb-3 pb-2 border-b border-gray-100">メルマガ</div>
+                <div class="border border-gray-200 rounded-lg p-3 space-y-1">
+                    <div class="text-[11px] text-gray-400">配信日時を表示</div>
+                    <a href="01060301_broadcast_history.html" class="text-sm font-medium text-brand-600">配信管理名を表示</a>
+                    <div class="text-sm text-gray-600">配信タイトルを表示</div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl border border-gray-200 p-4">
+                <div class="font-semibold text-sm mb-3 pb-2 border-b border-gray-100">送信メッセージ</div>
+                <div class="border border-gray-200 rounded-lg p-3 space-y-2">
+                    <div class="flex flex-wrap gap-x-3 gap-y-1 text-[11px] text-gray-400">
+                        <span>送信方法を表示</span>
+                        <span>送信日時を表示</span>
+                        <span>メッセージNOを表示</span>
+                    </div>
+                    <div class="text-sm font-medium text-gray-800">メッセージタイトルを表示</div>
+                    <div class="text-sm text-gray-600">メッセージ本文を表示</div>
+                </div>
+            </div>
+
+            <div class="text-right pb-2">
+                <a href="#" class="text-sm text-brand-600">全件表示</a>
+            </div>
+
         </div>
 
         <!-- タイムラインタブ -->
-        <div id="tab-timeline" class="tab-panel px-4 mt-4 hidden">
-            <div class="bg-white rounded-xl border border-gray-200 p-4 text-sm text-gray-500 text-center py-10">
-                タイムラインはまだありません
+        <div id="tab-timeline" class="tab-panel px-4 mt-4 space-y-3 hidden">
+            <div class="bg-white rounded-xl border border-gray-200 p-4">
+                <div class="font-semibold text-sm mb-3 pb-2 border-b border-gray-100">行動ログ</div>
+                <div class="border border-gray-200 rounded-lg p-3 space-y-1">
+                    <div class="flex justify-between text-[11px] text-gray-400">
+                        <span>ログNOを表示</span>
+                        <span>実行日を表示</span>
+                    </div>
+                    <div class="text-sm text-gray-700">行動内容を表示</div>
+                    <div class="flex gap-4 text-xs">
+                        <span class="text-gray-500">加算 <span class="text-gray-800">加算ポイントを表示</span></span>
+                        <span class="text-gray-500">減算 <span class="text-gray-800">減算ポイントを表示</span></span>
+                    </div>
+                </div>
             </div>
         </div>
+
+        <div class="px-4 mt-4">
+            <div class="bg-white rounded-xl border border-gray-200 p-4">
+                <div class="font-semibold text-sm mb-3 pb-2 border-b border-gray-100">見込み</div>
+                <div class="border border-gray-200 rounded-lg p-3 mb-3">
+                    <div class="flex items-center justify-between mb-2 text-sm">
+                        <button type="button" class="px-2 py-1 text-gray-400">&#9664;</button>
+                        <div class="font-medium text-gray-800">2026年9月</div>
+                        <button type="button" class="px-2 py-1 text-gray-400">&#9654;</button>
+                    </div>
+                    <div class="grid grid-cols-7 gap-1 text-center text-xs"><div class="py-1 text-gray-400">日</div><div class="py-1 text-gray-400">月</div><div class="py-1 text-gray-400">火</div><div class="py-1 text-gray-400">水</div><div class="py-1 text-gray-400">木</div><div class="py-1 text-gray-400">金</div><div class="py-1 text-gray-400">土</div><div></div><div></div><div class="py-1.5 rounded-lg">1</div><div class="py-1.5 rounded-lg">2</div><div class="py-1.5 rounded-lg">3</div><div class="py-1.5 rounded-lg">4</div><div class="py-1.5 rounded-lg">5</div><div class="py-1.5 rounded-lg">6</div><div class="py-1.5 rounded-lg">7</div><div class="py-1.5 rounded-lg">8</div><div class="py-1.5 rounded-lg">9</div><div class="py-1.5 rounded-lg">10</div><div class="py-1.5 rounded-lg">11</div><div class="py-1.5 rounded-lg">12</div><div class="py-1.5 rounded-lg">13</div><div class="py-1.5 rounded-lg">14</div><div class="py-1.5 rounded-lg">15</div><div class="py-1.5 rounded-lg">16</div><div class="py-1.5 rounded-lg">17</div><div class="py-1.5 rounded-lg">18</div><div class="py-1.5 rounded-lg">19</div><div class="py-1.5 rounded-lg">20</div><div class="py-1.5 rounded-lg">21</div><div class="py-1.5 rounded-lg">22</div><div class="py-1.5 rounded-lg">23</div><div class="py-1.5 rounded-lg">24</div><div class="py-1.5 rounded-lg">25</div><div class="py-1.5 rounded-lg">26</div><div class="py-1.5 rounded-lg bg-brand-600 text-white font-medium">27</div><div class="py-1.5 rounded-lg">28</div><div class="py-1.5 rounded-lg">29</div><div class="py-1.5 rounded-lg">30</div></div>
+                </div>
+                <div class="mb-3">
+                    <label class="block text-[11px] font-medium text-gray-600 mb-1">メモ</label>
+                    <textarea rows="4" class="w-full border border-gray-200 rounded-lg px-2 py-2 text-sm"></textarea><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <button type="button" class="bg-brand-600 active:bg-brand-700 text-white text-xs font-medium px-4 py-2 rounded-lg">見込みカレンダー設定</button>
+                    <button type="button" class="border border-gray-200 text-gray-600 active:bg-gray-50 text-xs font-medium px-4 py-2 rounded-lg">共有リンクコピー</button>
+                </div>
+            </div>
+        </div>
+
 
     </main>
 

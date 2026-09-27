@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja"><head><meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1"><title>禁止アドレスリスト - SystemRocky</title>
+<meta name="viewport" content="width=device-width, initial-scale=1"><title>登録禁止アドレスリスト - SystemRocky</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
   tailwind.config = { theme: { extend: { colors: {
@@ -44,16 +44,17 @@
             <a href="#" title="マスタ管理トップへ" class="shrink-0 text-lg font-bold text-brand-600 hover:text-brand-700 hover:underline">マスタ管理</a>
         </div>
         <div class="flex items-center gap-2 lg:gap-3">
-            <button title="ログアウト" class="flex items-center gap-1 border border-gray-200 rounded-lg px-2 lg:px-3 py-2 text-gray-500 hover:bg-gray-50 text-sm leading-none shrink-0"><span>&#9211;</span><span class="hidden lg:inline">ログアウト</span></button>
+            <a href="01010101_login.html" title="ログアウト" class="flex items-center gap-1 border border-gray-200 rounded-lg px-2 lg:px-3 py-2 text-gray-500 hover:bg-gray-50 text-sm leading-none shrink-0"><span>&#9211;</span><span class="hidden lg:inline">ログアウト</span></a>
         </div>
     </header>
     
-<main class="p-8 space-y-6">
-<div data-page-title class="text-xl font-bold text-gray-900">禁止アドレスリスト</div><div class="bg-white rounded-xl border border-gray-200 shadow-sm p-6 ">
+<!-- 準正常時：エラー項目の枠を border-gray-200 → border-red-400 に変え、直下の <p class="err-msg"> の hidden を外して文言を表示する -->
+    <main class="p-8 space-y-6">
+<div data-page-title class="text-xl font-bold text-gray-900">登録禁止アドレスリスト</div><div class="bg-white rounded-xl border border-gray-200 shadow-sm p-6 ">
         <div class="flex items-center justify-between mb-4 pb-3 border-b border-gray-100">
-            <div class="font-semibold text-gray-800">禁止アドレスリスト</div>
+            <div class="font-semibold text-gray-800">登録禁止アドレスリスト</div>
         </div><div><label class="block text-xs font-medium text-gray-600 mb-1"></label>
-        <textarea rows="10" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm"></textarea></div><div class="mt-4"><button class="bg-brand-600 hover:bg-brand-700 text-white text-sm font-medium px-5 py-2.5 rounded-lg">更新</button></div></div></main>
+        <textarea rows="10" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm"></textarea><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p></div><div class="mt-4"><button class="bg-brand-600 hover:bg-brand-700 text-white text-sm font-medium px-5 py-2.5 rounded-lg">更新</button></div></div></main>
 </div></div><script>
 function toggleSidebar(){
     document.getElementById('sidebar').classList.toggle('-translate-x-full');

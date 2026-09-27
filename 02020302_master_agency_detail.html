@@ -44,30 +44,25 @@
             <a href="#" title="マスタ管理トップへ" class="shrink-0 text-lg font-bold text-brand-600 hover:text-brand-700 hover:underline">マスタ管理</a>
         </div>
         <div class="flex items-center gap-2 lg:gap-3">
-            <button title="ログアウト" class="flex items-center gap-1 border border-gray-200 rounded-lg px-2 lg:px-3 py-2 text-gray-500 hover:bg-gray-50 text-sm leading-none shrink-0"><span>&#9211;</span><span class="hidden lg:inline">ログアウト</span></button>
+            <a href="01010101_login.html" title="ログアウト" class="flex items-center gap-1 border border-gray-200 rounded-lg px-2 lg:px-3 py-2 text-gray-500 hover:bg-gray-50 text-sm leading-none shrink-0"><span>&#9211;</span><span class="hidden lg:inline">ログアウト</span></a>
         </div>
     </header>
     
-<main class="p-8 space-y-6">
+<!-- 準正常時：エラー項目の枠を border-gray-200 → border-red-400 に変え、直下の <p class="err-msg"> の hidden を外して文言を表示する -->
+    <main class="p-8 space-y-6">
 <div data-page-title class="text-xl font-bold text-gray-900">通し代理店詳細</div><div class="bg-white rounded-xl border border-gray-200 shadow-sm p-6 ">
         <div class="flex items-center justify-between mb-4 pb-3 border-b border-gray-100">
             <div class="font-semibold text-gray-800">通し代理店詳細</div>
         </div>
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-3"><div><label class="block text-xs font-medium text-gray-600 mb-1">通し代理店NO</label>
-        <input type="text" value="" placeholder=""  class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white"></div><div><label class="block text-xs font-medium text-gray-600 mb-1">代理店名</label>
-        <input type="text" value="" placeholder=""  class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white"></div></div>
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-3"><div><label class="block text-xs font-medium text-gray-600 mb-1">ID</label>
-        <input type="text" value="" placeholder=""  class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white"></div><div><label class="block text-xs font-medium text-gray-600 mb-1">PASS</label>
-        <input type="text" value="" placeholder=""  class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white"></div></div>
-<div><label class="block text-xs font-medium text-gray-600 mb-1">メモ</label>
-        <textarea rows="3" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm"></textarea></div>
+<div class="overflow-x-auto"><table class="w-full text-sm"><colgroup><col class="w-40"><col></colgroup>
+<tbody><tr class="border-b border-gray-100"><th class="py-2.5 px-3 text-left align-top whitespace-nowrap text-xs font-medium text-gray-600 bg-gray-50">通し代理店NO</th><td class="py-2 px-3"><input type="text" value="" placeholder=""  class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white"><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p></td></tr><tr class="border-b border-gray-100"><th class="py-2.5 px-3 text-left align-top whitespace-nowrap text-xs font-medium text-gray-600 bg-gray-50">代理店名</th><td class="py-2 px-3"><input type="text" value="" placeholder=""  class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white"><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p></td></tr><tr class="border-b border-gray-100"><th class="py-2.5 px-3 text-left align-top whitespace-nowrap text-xs font-medium text-gray-600 bg-gray-50">ID</th><td class="py-2 px-3"><input type="text" value="" placeholder=""  class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white"><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p></td></tr><tr class="border-b border-gray-100"><th class="py-2.5 px-3 text-left align-top whitespace-nowrap text-xs font-medium text-gray-600 bg-gray-50">PASS</th><td class="py-2 px-3"><input type="text" value="" placeholder=""  class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm bg-white"><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p></td></tr><tr class="border-b border-gray-100"><th class="py-2.5 px-3 text-left align-top whitespace-nowrap text-xs font-medium text-gray-600 bg-gray-50">メモ</th><td class="py-2 px-3"><textarea rows="3" class="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm"></textarea><p class="err-msg hidden mt-1 text-xs text-red-600">（エラーメッセージ表示エリア）</p></td></tr></tbody></table></div>
 <div class="mt-4"><button class="bg-brand-600 hover:bg-brand-700 text-white text-sm font-medium px-5 py-2.5 rounded-lg">更新</button></div>
-</div><button class="bg-brand-600 hover:bg-brand-700 text-white text-sm font-medium px-5 py-2.5 rounded-lg">通しコードを発行</button><div class="bg-white rounded-xl border border-gray-200 shadow-sm p-6 mt-4">
+</div><a href="02020303_master_code_create.html" class="bg-brand-600 hover:bg-brand-700 text-white text-sm font-medium px-5 py-2.5 rounded-lg inline-block text-center">通しコード発行</a><div class="bg-white rounded-xl border border-gray-200 shadow-sm p-6 mt-4">
         <div class="flex items-center justify-between mb-4 pb-3 border-b border-gray-100">
             <div class="font-semibold text-gray-800">通しコード一覧</div>
-        </div><div class="overflow-x-auto"><table class="w-full text-sm">
-<thead><tr class="text-left text-xs text-gray-500 border-b border-gray-100"><th class="py-2">通しコードN</th><th>媒体名</th><th>通しコード</th><th>価格</th><th class="text-right">編集</th></tr></thead>
-<tbody><tr><td colspan="5" class="text-center text-gray-400 py-6">No data available in table</td></tr></tbody></table></div></div></main>
+        </div><div class="overflow-x-auto"><table class="w-full text-sm"><colgroup><col class="w-px"><col><col class="w-px"><col class="w-px"><col class="w-px"></colgroup>
+<thead><tr class="text-center text-xs text-gray-500 border-b border-gray-100"><th class="py-2 whitespace-nowrap px-3">通しコードNO</th><th class="px-3">媒体名</th><th class="whitespace-nowrap px-3">通しコード</th><th class="whitespace-nowrap px-3">価格</th><th class="text-center whitespace-nowrap px-3">編集</th></tr></thead>
+<tbody><tr class="border-b border-gray-50"><td class="py-2.5 text-center whitespace-nowrap px-3">検索結果を表示</td><td class="px-3">検索結果を表示</td><td class="text-center whitespace-nowrap px-3">検索結果を表示</td><td class="text-right whitespace-nowrap px-3">検索結果を表示</td><td class="text-center whitespace-nowrap px-3"><a href="02020202_master_code_detail.html" class="text-brand-600">編集</a></td></tr><tr class="border-b border-gray-50"><td class="py-2.5 text-center whitespace-nowrap px-3">検索結果を表示</td><td class="px-3">検索結果を表示</td><td class="text-center whitespace-nowrap px-3">検索結果を表示</td><td class="text-right whitespace-nowrap px-3">検索結果を表示</td><td class="text-center whitespace-nowrap px-3"><a href="02020202_master_code_detail.html" class="text-brand-600">編集</a></td></tr><tr class="border-b border-gray-50"><td class="py-2.5 text-center whitespace-nowrap px-3">検索結果を表示</td><td class="px-3">検索結果を表示</td><td class="text-center whitespace-nowrap px-3">検索結果を表示</td><td class="text-right whitespace-nowrap px-3">検索結果を表示</td><td class="text-center whitespace-nowrap px-3"><a href="02020202_master_code_detail.html" class="text-brand-600">編集</a></td></tr></tbody></table></div></div></main>
 </div></div><script>
 function toggleSidebar(){
     document.getElementById('sidebar').classList.toggle('-translate-x-full');
