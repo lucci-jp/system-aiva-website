@@ -25,21 +25,30 @@
 <body class="bg-side-900 min-h-screen flex items-center justify-center p-4">
 <!--
   01010101 ログイン
-  画面項目仕様(通番1-6): 画面表示タイトル(ラベル="systemrocky") / IDタイトル(ラベル="ID") /
+  画面項目仕様(通番1-6): 画面表示タイトル(ラベル="SystemRocky") / IDタイトル(ラベル="ID") /
   ID入力(テキスト、全角/半角ｶﾅ/英数記号入力可、30桁) / PASSタイトル(ラベル="PASS") /
-  PASS入力(テキスト、30桁) / ログイン(ボタン)
+  PASS入力(テキスト、30桁、マスク表示) / ログイン(ボタン)
   ログイン成功後は OperatorSession::setOperator() でセッションへユーザー共通情報を格納した上で、
   サイト選択(01010201)へ遷移する。
+
+  【2026-09-28 確定事項 ＝ 仕様書へ反映する】
+   ・通番1 画面表示タイトルの初期表示値は "systemrocky" → "SystemRocky"（システム名称の表記統一）
+   ・通番5 PASS入力は マスク表示（伏字）。種別欄に追記する
+   ・ID入力/PASS入力のプレースホルダ「ログインID」「パスワード」は仕様に無いが残す
+
+  【画面基調】01010201 サイト選択 / 01020201 システムエラー と共通
+   背景 bg-side-900 ／ 幅 max-w-md ／ カード bg-white rounded-2xl shadow-xl ／
+   カード外上部に白文字のシステム名称「SystemRocky」／ カード内余白 px-8 py-8
 -->
-<div class="w-full max-w-sm">
+<div class="w-full max-w-md">
+
+    <!-- 画面表示タイトル(通番1) -->
+    <div class="flex items-center justify-center mb-6">
+        <div class="text-white font-bold">SystemRocky</div>
+    </div>
 
     <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
-        <div class="px-8 pt-10 pb-8">
-
-            <!-- 画面表示タイトル(通番1) -->
-            <div class="flex flex-col items-center mb-8">
-                <div class="text-lg font-bold text-gray-900 tracking-wide">systemrocky</div>
-            </div>
+        <div class="px-8 py-8">
 
             <form method="POST" action="#" class="space-y-4">
 
@@ -57,7 +66,7 @@
                            class="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm bg-white">
                 </div>
 
-                <!-- エラー時表示例(通常は非表示。E0011: ID/パスワードが一致しません 等) -->
+                <!-- 準正常時(通番6)：ID・PASS入力前の初期状態に戻す。通常は非表示 -->
                 <div class="hidden bg-red-50 border border-red-100 text-red-600 text-xs rounded-lg px-3 py-2">
                     IDまたはパスワードが正しくありません。
                 </div>

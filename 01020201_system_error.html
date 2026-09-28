@@ -30,6 +30,10 @@
   まだ画面遷移が確定していない/継続不能な状態を想定し、他の異常系画面
   (01010101ログイン, 01010201サイト選択)と同様、サイドバー無しの中央寄せカードで構成する。
 
+  【画面基調】01010101 ログイン / 01010201 サイト選択 と共通
+   背景 bg-side-900 ／ 幅 max-w-md ／ カード bg-white rounded-2xl shadow-xl ／
+   カード外上部に白文字のシステム名称「SystemRocky」／ カード内余白 px-8 py-8
+
   画面項目仕様(通番1-3):
    1. エラータイトル(ラベル)     初期表示値: システムエラーが発生しました
    2. エラーメッセージ(ラベル)   初期表示値: しばらくしてから再度お試しください。改善しない場合は管理者へご連絡ください。
@@ -43,7 +47,7 @@
 
     <div class="bg-white rounded-2xl shadow-xl overflow-hidden text-center">
 
-        <div class="px-8 pt-10 pb-8">
+        <div class="px-8 py-8">
 
             <!-- アイコン -->
             <div class="w-16 h-16 rounded-full bg-red-50 text-red-500 flex items-center justify-center mx-auto mb-5 text-3xl font-bold">

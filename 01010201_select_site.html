@@ -29,8 +29,12 @@
   他画面のようなサイドバー付きレイアウトは使わず、ログイン画面同様に中央寄せのカードで構成する。
   上段: ログイン中ユーザーの情報 / 下段: 担当サイトの選択リスト
   選択後は選択サイトがセッションに確定し、通常の管理画面(サイドバー付き)へ遷移する。
+
+  【画面基調】01010101 ログイン / 01020201 システムエラー と共通
+   背景 bg-side-900 ／ 幅 max-w-md ／ カード bg-white rounded-2xl shadow-xl ／
+   カード外上部に白文字のシステム名称「SystemRocky」／ カード内余白 px-8 py-8
 -->
-<div class="w-full max-w-lg">
+<div class="w-full max-w-md">
 
     <div class="flex items-center justify-center mb-6">
         <div class="text-white font-bold">SystemRocky</div>
@@ -39,7 +43,7 @@
     <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
 
         <!-- ユーザー情報(画面項目仕様 通番7-8: ニックネーム/LINE名) -->
-        <div class="bg-brand-600 text-white px-6 py-5">
+        <div class="bg-brand-600 text-white px-8 py-6">
             <div class="flex items-center gap-3">
                 <div class="w-11 h-11 rounded-full bg-white/20 flex items-center justify-center font-bold shrink-0">AJ</div>
                 <div class="flex-1 min-w-0 space-y-1.5">
@@ -56,7 +60,7 @@
         </div>
 
         <!-- サイト(画面項目仕様 通番9-11: 「サイト」見出し/サイトリスト(リストボックス)/サイト選択(ボタン)) -->
-        <div class="p-6">
+        <div class="px-8 py-8">
             <div class="font-semibold text-gray-800 mb-3">サイト</div>
 
             <form method="POST" action="#">
